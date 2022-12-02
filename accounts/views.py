@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-
+from accounts.models import *
 # Create your views here.
 
+# differnt account for members and employee:
+# https://github.com/okanuregen/Django---Hotel-Management-System/blob/main/HMS/accounts/views.py
 
 
 def login(request):
@@ -21,8 +23,6 @@ def login(request):
         else:
             messages.info(request,'invalid credentials')
             return redirect('login')
-
-
 
     else:
         return render(request,'login.html')
@@ -48,14 +48,11 @@ def register(request):
             else:
                 user = User.objects.create_user(username=username, password=password1, email=email,first_name=first_name,last_name=last_name)
                 user.save()
-                return redirect('login')
-                
+                return redirect('login')   
 
             '''elif User.objects.filter(email=email).exists:
                 messages.info(request,'Email Taken')
                 return redirect('register')'''
-
-            
 
         else:
             messages.info(request,'Passwords do not match')
@@ -75,5 +72,44 @@ def contact(request):
     return render(request, 'contact.html')
 
 
+# def add_employee(request):
+#     role = str(request.user.groups.all()[0])
+#     path = role + "/"
 
-    
+#     form = CreateUserForm()
+#     form2 = ROLES()
+#     form3 = CreateEmployeeForm()
+
+#     if request.method == 'POST':
+#         post = request.POST.copy()  # to make it mutable
+#         post['phoneNumber'] = "+90" + post['phoneNumber']
+#         request.POST = post
+
+#         form = CreateUserForm(request.POST)
+#         form2 = ROLES(request.POST)
+#         form3 = CreateEmployeeForm(request.POST)
+
+#         if form.is_valid() and form2.is_valid() and form3.is_valid():
+#             user = form.save()
+#             employee = form3.save()
+#             employee.user = user
+#             employee.save()
+
+#             username = form.cleaned_data.get('username')
+
+#             role = form2.cleaned_data.get("ROLES_TYPES")
+
+#             group = Group.objects.get(name=role)
+#             user.groups.add(group)
+
+#             messages.success(
+#                 request, role + ' Account Was Created Succesfuly For ' + username)
+
+#             return redirect('employees')
+#     context = {
+#         'form': form,
+#         'form2': form2,
+#         'form3': form3,
+#         "role": role
+#     }
+#     return render(request, path + "add-employee.html", context)

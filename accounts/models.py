@@ -7,9 +7,8 @@ import datetime
 # Create your models here.
 
 class GenderOptions(models.TextChoices):
-    FEMALE = 'Female'
-    MALE = 'Male'
-    UNSURE = 'Unsure'
+    FEMALE = 'F'
+    MALE = 'M'
 
 class NationOptions(models.TextChoices):
     TAIWAN = 'Taiwan'
@@ -23,10 +22,12 @@ class Member(models.Model):
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     gender = models.CharField(max_length=1, choices=GenderOptions.choices)
     birthday = models.DateField(default=datetime.date.today)
-    nation = models.CharField(max_length=1, choices=NationOptions.choices)
+    nation = models.CharField(max_length=20, choices=NationOptions.choices)
     register_Date = models.DateField(default=datetime.date.today)
+    # class Meta:
+    #     app_label = 'accounts.member'
     def __str__(self):
-        return str(self.user)
+        return str(self.user.username)
 
 class Guide(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
@@ -35,7 +36,9 @@ class Guide(models.Model):
     birthday = models.DateField(default=datetime.date.today)
     language = models.CharField(max_length=200)
     seniority = models.IntegerField(default=0)
+    # class Meta:
+    #     app_label = 'accounts.guide'
     def __str__(self):
-        return str(self.user)
+        return str(self.user.username)
 
 

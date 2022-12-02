@@ -1,6 +1,7 @@
 from django.db import models
 from itinerary.models import *
 from accounts.models import Guide
+from datetime import date
 
 # Create your models here.
 class Destination(models.Model):
@@ -28,3 +29,5 @@ class Tour(models.Model):
     # TODO
     def update_total_tourist():
         return
+    def __str__(self):
+        return f'{self.name}'

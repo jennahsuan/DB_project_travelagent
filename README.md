@@ -42,6 +42,8 @@ All are done in the root directory
 
     ```sh
     pip install -r requirements.txt
+    # OR
+    python -m pip install -r requirements.txt
     ```
 
 3. start server
