@@ -1,0 +1,11 @@
+.vscode
+.venv
+.env
+db.sqlite3
+whole.json
+data_travello
+accounts/__pycache__
+calc/__pycache__
+travello/__pycache__
+travelloapp/__pycache__
+travelloapp/migrations/__pycache__
