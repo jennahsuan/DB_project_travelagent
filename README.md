@@ -10,8 +10,12 @@ A travel planner website UI integrated with PostgreSQL. User can register and si
 (source code的tables)
 1. download [PostgreSQL 14](https://www.postgresql.org/download/) and [pgAdmin](https://www.pgadmin.org/) (GUI介面)
 2. Open pgAdmin4，在PostgreSQL/Database按右鍵 -> Create Database -> 命名為`DB_travel`
+    
     <img src="images/createDB.png"/>    
+    
     - 首次下載pgAdmin 如果系統要求設定user password，則設為`postgres`
+        <img src="images/settings.png"/>   
+    
 3. Open travello/settings.py, use the correct 'PASSWORD' in DATABASES. 
 4. 第一次runserver 後，應該就能在pgAdmin看到DB_travel/Schemas/public/Tables 內看到多個tables。在一table按右鍵 -> View/Edit data -> All rows ，即可看到表格形式的table。
 <!-- python manage.py loaddata whole.json  -->
@@ -21,33 +25,33 @@ All are done in the root directory
 
 1. set virtual environment
 
-```sh
-# for windows
-pip install virtualenv
-py -3 -m venv .venv
-.venv\scripts\activate
-```
-```sh
-# for mac(不確定是不是這樣)
-pip install virtualenv
-virtualenv venv
-source venv/bin/activate
-```
+    ```sh
+    # for windows
+    pip install virtualenv
+    py -3 -m venv .venv
+    .venv\scripts\activate
+    ```
+    ```sh
+    # for mac(不確定是不是這樣)
+    pip install virtualenv
+    virtualenv venv
+    source venv/bin/activate
+    ```
 
 2. install packages
 
-```sh
-pip install -r requirements.txt
-```
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 3. start server
 
-```sh
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
-# https://127.0.0.1:8000 in your browser
-```
+    ```sh
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py runserver
+    # https://127.0.0.1:8000 in your browser
+    ```
 
 ### Create SUPER USER
 
@@ -60,7 +64,7 @@ python manage.py createsuperuser
 - Go to http://127.0.0.1:8000/admin/ Add some testing data and check in pgAdmin to see if the tables have updated some new rows.
 
 ---
-
+<!-- 
 ## :fire: Features
 
 - Beautiful UI.
@@ -68,14 +72,14 @@ python manage.py createsuperuser
 - Dummy data of flights added(Can't afford API XD).
 - Uses can publish travel blogs.
 
----
+---   -->
 
 ## :bulb: Built Using
 
-- [**BOOTSTRAP**](https://getbootstrap.com/)
+<!-- - [**BOOTSTRAP**](https://getbootstrap.com/)   -->
 - [**DJANGO**](https://www.djangoproject.com/)
 - [**POSTGRESQL**](https://www.postgresql.org/)
-
+<!-- 
 ---
 
 ## :iphone: Screenshots
@@ -101,3 +105,9 @@ python manage.py createsuperuser
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
+   -->
+   
+---
+
+## Reference
+https://github.com/UtkarshChaurasia/travello.git
