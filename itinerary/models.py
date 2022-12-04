@@ -1,7 +1,5 @@
 import uuid
 from django.db import models
-# import datetime
-# from datetime import datetime, date
 
 # Create your models here.
 
@@ -29,7 +27,7 @@ class Bus(models.Model):
     driverName =  models.CharField(max_length=50, null=False, blank=False)
     company =  models.CharField(max_length=50, null=True, blank=True)
     year = models.IntegerField(blank=True)
-    seat_number = models.IntegerField(null=False, blank=False)
+    seat_number = models.IntegerField(null=False, blank=False, default=50)
 
 class Itinerary(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

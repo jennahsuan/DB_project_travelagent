@@ -2,6 +2,7 @@ from django.db import models
 from itinerary.models import *
 from accounts.models import Guide
 from datetime import date
+import uuid
 
 # Create your models here.
 class Destination(models.Model):
@@ -24,7 +25,7 @@ class Tour(models.Model):
     guide = models.ForeignKey(Guide, on_delete=models.SET_NULL, null = True, blank = True)
     field = models.CharField(max_length=100, null=True, blank=True)
     total_tourist = models.IntegerField()
-    max_tourist = models.IntegerField()
+    # max_tourist = models.IntegerField()
     
     # TODO
     def update_total_tourist():

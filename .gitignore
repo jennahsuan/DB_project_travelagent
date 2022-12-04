@@ -7,6 +7,7 @@ data_travello
 accounts/__pycache__
 accounts/migrations
 calc/__pycache__
+calc/migrations
 travello/__pycache__
 travelloapp/__pycache__
 travelloapp/migrations

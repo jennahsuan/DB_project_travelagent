@@ -66,21 +66,14 @@ python manage.py createsuperuser
 - Go to http://127.0.0.1:8000/admin/ Add some testing data and check in pgAdmin to see if the tables have updated some new rows.
 
 ---
-<!-- 
-## :fire: Features
-
-- Beautiful UI.
-- Sign Up and Sign In feature.
-- Dummy data of flights added(Can't afford API XD).
-- Uses can publish travel blogs.
-
----   -->
 
 ## :bulb: Built Using
 
 <!-- - [**BOOTSTRAP**](https://getbootstrap.com/)   -->
 - [**DJANGO**](https://www.djangoproject.com/)
 - [**POSTGRESQL**](https://www.postgresql.org/)
+
+- [**kanban**](https://www.notion.so/65fda7ca561d472d85257791d9525a06?v=16f41c887d7249e4af52043d52b61dd7)
 <!-- 
 ---
 
