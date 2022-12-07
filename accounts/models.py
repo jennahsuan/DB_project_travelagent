@@ -17,7 +17,7 @@ class NationOptions(models.TextChoices):
     USA = 'USA'
 
 class Member(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    member = models.OneToOneField(User, null=False, on_delete=models.CASCADE, primary_key=True, default=0)
     # name = models.CharField(max_length=200, null=False, blank=False, unique=False)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     gender = models.CharField(max_length=1, choices=GenderOptions.choices)
@@ -30,7 +30,7 @@ class Member(models.Model):
         return str(self.user.username)
 
 class Guide(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    guide = models.OneToOneField(User, null=False, on_delete=models.CASCADE, primary_key=True, default=0)
     # name = models.CharField(max_length=200, null=False, blank=False, unique=False)
     phone = PhoneNumberField(unique=True)
     birthday = models.DateField(default=datetime.date.today)

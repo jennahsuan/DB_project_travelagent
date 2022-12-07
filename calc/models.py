@@ -5,7 +5,7 @@ import uuid
 
 # Create your models here.
 class Order(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.IntegerField(primary_key=True, default=0, editable=False)
     tour = models.ForeignKey(Tour, on_delete=models.CASCADE)
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
     order_tourist_count = models.IntegerField(blank=False, null=False, default= 1)

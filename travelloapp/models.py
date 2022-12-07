@@ -2,7 +2,7 @@ from django.db import models
 from itinerary.models import *
 from accounts.models import Guide
 from datetime import date
-import uuid
+# import uuid
 
 # Create your models here.
 class Destination(models.Model):
@@ -15,10 +15,10 @@ class Destination(models.Model):
 '''Above is source code'''
 
 class Tour(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.IntegerField(primary_key=True, default=0, editable=False)
     name = models.CharField(max_length=100, null=False, blank=False)
-    itinerary_plan = models.ForeignKey(Itinerary, on_delete=models.CASCADE, null = False)
-    bus = models.ForeignKey(Bus, on_delete=models.SET_NULL, null = True, blank = True)
+    itinerary_plan = models.ForeignKey(Itinerary, on_delete=models.CASCADE, null = False, default=0)
+    bus = models.ForeignKey(Bus, on_delete=models.SET_NULL, null = True, blank = True, default=0)
     startDate = models.DateField(auto_now_add=False,  blank=True, default=date.today) 
     endDate = models.DateField(auto_now=False, blank=True, default=date.today) 
     price = models.IntegerField()
@@ -31,4 +31,4 @@ class Tour(models.Model):
     def update_total_tourist():
         return
     def __str__(self):
-        return f'{self.name}'
+        return f'{self.id}'
