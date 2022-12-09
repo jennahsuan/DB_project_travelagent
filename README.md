@@ -11,17 +11,23 @@ A travel planner website UI integrated with PostgreSQL. User can register and si
 1. download [PostgreSQL 14](https://www.postgresql.org/download/) and [pgAdmin](https://www.pgadmin.org/) (GUI介面)
 2. Open pgAdmin4，在PostgreSQL/Database按右鍵 -> Create Database -> 命名為`DB_travel`
     
-    <img src="images/createDB.png"/>    
+    <img src="images/createDB.png"  alt="drawing" width="600"/>    
     
     - 首次下載pgAdmin 如果系統要求設定user password，則設為`postgres`
-        <img src="images/settings.png"/>   
+    
+       <img src="images/settings.png"  alt="drawing" width="600"/>   
     
 3. 在`DB_travel` 按右鍵，選Query Tool
-    <img src="images/import_sql1.png"/>
+
+    <img src="images/import_sql1.png"  alt="drawing" width="400"/>
+    
     按下左上角資料夾按鈕(Open file)，在跳出的視窗中選取 `db.sql` 的路徑，按右下角Select
-    <img src="images/import_sql2.png"/>
+    
+    <img src="images/import_sql2.png"  alt="drawing" width="500"/>
+    
     在 Query Editor 中即自動出現新增資料與表格的queries，按下右上角的 Run 按鈕來執行。完成後Refresh Schema，即可看到所有表格
-    <img src="images/import_sql3.png"/>
+    
+    <img src="images/import_sql3.png"  alt="drawing" width="500"/>
 
 4. Open travello/settings.py, use the correct 'PASSWORD' in DATABASES. 
 <!-- 5. 第一次runserver 後，應該就能在pgAdmin看到DB_travel/Schemas/public/Tables 內看到多個tables。在一table按右鍵 -> View/Edit data -> All rows ，即可看到表格形式的table。 -->
