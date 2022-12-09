@@ -2,6 +2,7 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 import datetime
+# from django_countries.fields import CountryField
 
 
 # Create your models here.
@@ -15,14 +16,19 @@ class NationOptions(models.TextChoices):
     JAPAN = 'Japan'
     KOREA = 'Korea'
     USA = 'USA'
+    Russia ='Russia' 
+    Switzerland = 'Switzerland'
+    Iceland = 'Iceland'
+
 
 class Member(models.Model):
-    member = models.OneToOneField(User, null=False, on_delete=models.CASCADE, primary_key=True, default=0)
-    # name = models.CharField(max_length=200, null=False, blank=False, unique=False)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, null=True, blank=True, unique=False)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
+    email = models.EmailField(null=True, blank=True)
     gender = models.CharField(max_length=1, choices=GenderOptions.choices)
     birthday = models.DateField(default=datetime.date.today)
-    nation = models.CharField(max_length=20, choices=NationOptions.choices)
+    nation = models.CharField(max_length=20, choices=NationOptions.choices) # CountryField(null=False, blank=False)
     register_Date = models.DateField(default=datetime.date.today)
     # class Meta:
     #     app_label = 'accounts.member'
@@ -30,9 +36,8 @@ class Member(models.Model):
         return str(self.user.username)
 
 class Guide(models.Model):
-    guide = models.OneToOneField(User, null=False, on_delete=models.CASCADE, primary_key=True, default=0)
-    # name = models.CharField(max_length=200, null=False, blank=False, unique=False)
-    phone = PhoneNumberField(unique=True)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, null=True, blank=True, unique=False)
     birthday = models.DateField(default=datetime.date.today)
     language = models.CharField(max_length=200)
     seniority = models.IntegerField(default=0)
