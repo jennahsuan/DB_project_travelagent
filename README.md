@@ -29,7 +29,14 @@ A travel planner website UI integrated with PostgreSQL. User can register and si
     
     <img src="images/import_sql3.png"  alt="drawing" width="500"/>
 
-4. Open travello/settings.py, use the correct 'PASSWORD' in DATABASES. 
+4. 為了在新增資料時，postgresql能夠依據已匯入的資料id來生成新id，需在Query Editor輸入以下指令並執行。
+
+    ```shell
+    SELECT setval('accounts_member_id_seq', (SELECT MAX(id) from public.accounts_member));
+    SELECT setval('accounts_guide_id_seq', (SELECT MAX(id) from public.accounts_guide));
+    ```
+5. Open travello/settings.py, use the correct 'PASSWORD' in DATABASES. 
+
 <!-- 5. 第一次runserver 後，應該就能在pgAdmin看到DB_travel/Schemas/public/Tables 內看到多個tables。在一table按右鍵 -> View/Edit data -> All rows ，即可看到表格形式的table。 -->
 <!-- python manage.py loaddata whole.json  -->
 
