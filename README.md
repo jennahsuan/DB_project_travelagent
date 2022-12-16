@@ -25,7 +25,7 @@ A travel planner website UI integrated with PostgreSQL. User can register and si
     
     <img src="images/import_sql2.png"  alt="drawing" width="500"/>
     
-    在 Query Editor 中即自動出現新增資料與表格的queries，按下右上角的 Run 按鈕來執行。完成後Refresh Schema，即可看到所有表格
+    在 Query Editor 中會自動出現新增資料與表格的queries，按下右上角的 Run 按鈕來執行。完成後Refresh Schema，即可看到所有表格
     
     <img src="images/import_sql3.png"  alt="drawing" width="500"/>
 
@@ -83,6 +83,7 @@ All are done in the root directory
 python manage.py createsuperuser
 
 ```
+<!-- user accounts are created for the first 5 guides and members with password 'test' -->
 
 - Set username & password as you like
 - Go to http://127.0.0.1:8000/admin/ Add some testing data and check in pgAdmin to see if the tables have updated some new rows.

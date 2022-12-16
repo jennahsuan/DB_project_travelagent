@@ -5,7 +5,7 @@
 -- Dumped from database version 14.2
 -- Dumped by pg_dump version 14.2
 
--- Started on 2022-12-09 21:39:41
+-- Started on 2022-12-16 17:49:00
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 228 (class 1259 OID 20654)
+-- TOC entry 209 (class 1259 OID 21194)
 -- Name: accounts_guide; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -40,7 +40,7 @@ CREATE TABLE public.accounts_guide (
 ALTER TABLE public.accounts_guide OWNER TO postgres;
 
 --
--- TOC entry 227 (class 1259 OID 20653)
+-- TOC entry 210 (class 1259 OID 21197)
 -- Name: accounts_guide_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -56,7 +56,7 @@ ALTER TABLE public.accounts_guide_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3580 (class 0 OID 0)
--- Dependencies: 227
+-- Dependencies: 210
 -- Name: accounts_guide_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -64,7 +64,7 @@ ALTER SEQUENCE public.accounts_guide_id_seq OWNED BY public.accounts_guide.id;
 
 
 --
--- TOC entry 226 (class 1259 OID 20643)
+-- TOC entry 211 (class 1259 OID 21198)
 -- Name: accounts_member; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -84,7 +84,7 @@ CREATE TABLE public.accounts_member (
 ALTER TABLE public.accounts_member OWNER TO postgres;
 
 --
--- TOC entry 225 (class 1259 OID 20642)
+-- TOC entry 212 (class 1259 OID 21203)
 -- Name: accounts_member_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -100,7 +100,7 @@ ALTER TABLE public.accounts_member_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3581 (class 0 OID 0)
--- Dependencies: 225
+-- Dependencies: 212
 -- Name: accounts_member_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -108,7 +108,7 @@ ALTER SEQUENCE public.accounts_member_id_seq OWNED BY public.accounts_member.id;
 
 
 --
--- TOC entry 216 (class 1259 OID 20552)
+-- TOC entry 213 (class 1259 OID 21204)
 -- Name: auth_group; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -121,7 +121,7 @@ CREATE TABLE public.auth_group (
 ALTER TABLE public.auth_group OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 20551)
+-- TOC entry 214 (class 1259 OID 21207)
 -- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -138,7 +138,7 @@ ALTER TABLE public.auth_group_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3582 (class 0 OID 0)
--- Dependencies: 215
+-- Dependencies: 214
 -- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -146,7 +146,7 @@ ALTER SEQUENCE public.auth_group_id_seq OWNED BY public.auth_group.id;
 
 
 --
--- TOC entry 218 (class 1259 OID 20561)
+-- TOC entry 215 (class 1259 OID 21208)
 -- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -160,7 +160,7 @@ CREATE TABLE public.auth_group_permissions (
 ALTER TABLE public.auth_group_permissions OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 20560)
+-- TOC entry 216 (class 1259 OID 21211)
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -176,7 +176,7 @@ ALTER TABLE public.auth_group_permissions_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3583 (class 0 OID 0)
--- Dependencies: 217
+-- Dependencies: 216
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -184,7 +184,7 @@ ALTER SEQUENCE public.auth_group_permissions_id_seq OWNED BY public.auth_group_p
 
 
 --
--- TOC entry 214 (class 1259 OID 20545)
+-- TOC entry 217 (class 1259 OID 21212)
 -- Name: auth_permission; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -199,7 +199,7 @@ CREATE TABLE public.auth_permission (
 ALTER TABLE public.auth_permission OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 20544)
+-- TOC entry 218 (class 1259 OID 21215)
 -- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -216,7 +216,7 @@ ALTER TABLE public.auth_permission_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3584 (class 0 OID 0)
--- Dependencies: 213
+-- Dependencies: 218
 -- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -224,7 +224,7 @@ ALTER SEQUENCE public.auth_permission_id_seq OWNED BY public.auth_permission.id;
 
 
 --
--- TOC entry 220 (class 1259 OID 20568)
+-- TOC entry 219 (class 1259 OID 21216)
 -- Name: auth_user; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -246,7 +246,7 @@ CREATE TABLE public.auth_user (
 ALTER TABLE public.auth_user OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 20577)
+-- TOC entry 220 (class 1259 OID 21221)
 -- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -260,7 +260,7 @@ CREATE TABLE public.auth_user_groups (
 ALTER TABLE public.auth_user_groups OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 20576)
+-- TOC entry 221 (class 1259 OID 21224)
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -284,7 +284,7 @@ ALTER SEQUENCE public.auth_user_groups_id_seq OWNED BY public.auth_user_groups.i
 
 
 --
--- TOC entry 219 (class 1259 OID 20567)
+-- TOC entry 222 (class 1259 OID 21225)
 -- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -301,7 +301,7 @@ ALTER TABLE public.auth_user_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3586 (class 0 OID 0)
--- Dependencies: 219
+-- Dependencies: 222
 -- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -309,7 +309,7 @@ ALTER SEQUENCE public.auth_user_id_seq OWNED BY public.auth_user.id;
 
 
 --
--- TOC entry 224 (class 1259 OID 20584)
+-- TOC entry 223 (class 1259 OID 21226)
 -- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -323,7 +323,7 @@ CREATE TABLE public.auth_user_user_permissions (
 ALTER TABLE public.auth_user_user_permissions OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 20583)
+-- TOC entry 224 (class 1259 OID 21229)
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -339,7 +339,7 @@ ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3587 (class 0 OID 0)
--- Dependencies: 223
+-- Dependencies: 224
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -347,7 +347,7 @@ ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_use
 
 
 --
--- TOC entry 246 (class 1259 OID 20815)
+-- TOC entry 225 (class 1259 OID 21230)
 -- Name: calc_order; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -363,7 +363,7 @@ CREATE TABLE public.calc_order (
 ALTER TABLE public.calc_order OWNER TO postgres;
 
 --
--- TOC entry 245 (class 1259 OID 20814)
+-- TOC entry 226 (class 1259 OID 21233)
 -- Name: calc_order_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -379,7 +379,7 @@ ALTER TABLE public.calc_order_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3588 (class 0 OID 0)
--- Dependencies: 245
+-- Dependencies: 226
 -- Name: calc_order_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -387,7 +387,7 @@ ALTER SEQUENCE public.calc_order_id_seq OWNED BY public.calc_order.id;
 
 
 --
--- TOC entry 247 (class 1259 OID 20821)
+-- TOC entry 227 (class 1259 OID 21234)
 -- Name: calc_tourist; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -404,7 +404,7 @@ CREATE TABLE public.calc_tourist (
 ALTER TABLE public.calc_tourist OWNER TO postgres;
 
 --
--- TOC entry 230 (class 1259 OID 20674)
+-- TOC entry 228 (class 1259 OID 21239)
 -- Name: django_admin_log; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -424,7 +424,7 @@ CREATE TABLE public.django_admin_log (
 ALTER TABLE public.django_admin_log OWNER TO postgres;
 
 --
--- TOC entry 229 (class 1259 OID 20673)
+-- TOC entry 229 (class 1259 OID 21245)
 -- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -449,7 +449,7 @@ ALTER SEQUENCE public.django_admin_log_id_seq OWNED BY public.django_admin_log.i
 
 
 --
--- TOC entry 212 (class 1259 OID 20536)
+-- TOC entry 230 (class 1259 OID 21246)
 -- Name: django_content_type; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -463,7 +463,7 @@ CREATE TABLE public.django_content_type (
 ALTER TABLE public.django_content_type OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 20535)
+-- TOC entry 231 (class 1259 OID 21249)
 -- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -480,7 +480,7 @@ ALTER TABLE public.django_content_type_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3590 (class 0 OID 0)
--- Dependencies: 211
+-- Dependencies: 231
 -- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -488,7 +488,7 @@ ALTER SEQUENCE public.django_content_type_id_seq OWNED BY public.django_content_
 
 
 --
--- TOC entry 210 (class 1259 OID 20527)
+-- TOC entry 232 (class 1259 OID 21250)
 -- Name: django_migrations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -503,7 +503,7 @@ CREATE TABLE public.django_migrations (
 ALTER TABLE public.django_migrations OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 20526)
+-- TOC entry 233 (class 1259 OID 21255)
 -- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -519,7 +519,7 @@ ALTER TABLE public.django_migrations_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3591 (class 0 OID 0)
--- Dependencies: 209
+-- Dependencies: 233
 -- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -527,7 +527,7 @@ ALTER SEQUENCE public.django_migrations_id_seq OWNED BY public.django_migrations
 
 
 --
--- TOC entry 248 (class 1259 OID 20845)
+-- TOC entry 234 (class 1259 OID 21256)
 -- Name: django_session; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -541,7 +541,7 @@ CREATE TABLE public.django_session (
 ALTER TABLE public.django_session OWNER TO postgres;
 
 --
--- TOC entry 232 (class 1259 OID 20704)
+-- TOC entry 235 (class 1259 OID 21261)
 -- Name: itinerary_bus; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -557,7 +557,7 @@ CREATE TABLE public.itinerary_bus (
 ALTER TABLE public.itinerary_bus OWNER TO postgres;
 
 --
--- TOC entry 231 (class 1259 OID 20703)
+-- TOC entry 236 (class 1259 OID 21264)
 -- Name: itinerary_bus_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -573,7 +573,7 @@ ALTER TABLE public.itinerary_bus_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3592 (class 0 OID 0)
--- Dependencies: 231
+-- Dependencies: 236
 -- Name: itinerary_bus_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -581,7 +581,7 @@ ALTER SEQUENCE public.itinerary_bus_id_seq OWNED BY public.itinerary_bus.id;
 
 
 --
--- TOC entry 234 (class 1259 OID 20711)
+-- TOC entry 237 (class 1259 OID 21265)
 -- Name: itinerary_hotel; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -595,7 +595,7 @@ CREATE TABLE public.itinerary_hotel (
 ALTER TABLE public.itinerary_hotel OWNER TO postgres;
 
 --
--- TOC entry 233 (class 1259 OID 20710)
+-- TOC entry 238 (class 1259 OID 21268)
 -- Name: itinerary_hotel_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -611,7 +611,7 @@ ALTER TABLE public.itinerary_hotel_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3593 (class 0 OID 0)
--- Dependencies: 233
+-- Dependencies: 238
 -- Name: itinerary_hotel_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -619,7 +619,7 @@ ALTER SEQUENCE public.itinerary_hotel_id_seq OWNED BY public.itinerary_hotel.id;
 
 
 --
--- TOC entry 240 (class 1259 OID 20732)
+-- TOC entry 239 (class 1259 OID 21269)
 -- Name: itinerary_itinerary; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -638,7 +638,7 @@ CREATE TABLE public.itinerary_itinerary (
 ALTER TABLE public.itinerary_itinerary OWNER TO postgres;
 
 --
--- TOC entry 239 (class 1259 OID 20731)
+-- TOC entry 240 (class 1259 OID 21272)
 -- Name: itinerary_itinerary_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -654,7 +654,7 @@ ALTER TABLE public.itinerary_itinerary_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3594 (class 0 OID 0)
--- Dependencies: 239
+-- Dependencies: 240
 -- Name: itinerary_itinerary_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -662,7 +662,7 @@ ALTER SEQUENCE public.itinerary_itinerary_id_seq OWNED BY public.itinerary_itine
 
 
 --
--- TOC entry 236 (class 1259 OID 20718)
+-- TOC entry 241 (class 1259 OID 21273)
 -- Name: itinerary_restaurant; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -676,7 +676,7 @@ CREATE TABLE public.itinerary_restaurant (
 ALTER TABLE public.itinerary_restaurant OWNER TO postgres;
 
 --
--- TOC entry 235 (class 1259 OID 20717)
+-- TOC entry 242 (class 1259 OID 21276)
 -- Name: itinerary_restaurant_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -692,7 +692,7 @@ ALTER TABLE public.itinerary_restaurant_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3595 (class 0 OID 0)
--- Dependencies: 235
+-- Dependencies: 242
 -- Name: itinerary_restaurant_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -700,7 +700,7 @@ ALTER SEQUENCE public.itinerary_restaurant_id_seq OWNED BY public.itinerary_rest
 
 
 --
--- TOC entry 238 (class 1259 OID 20725)
+-- TOC entry 243 (class 1259 OID 21277)
 -- Name: itinerary_site; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -714,7 +714,7 @@ CREATE TABLE public.itinerary_site (
 ALTER TABLE public.itinerary_site OWNER TO postgres;
 
 --
--- TOC entry 237 (class 1259 OID 20724)
+-- TOC entry 244 (class 1259 OID 21280)
 -- Name: itinerary_site_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -730,7 +730,7 @@ ALTER TABLE public.itinerary_site_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3596 (class 0 OID 0)
--- Dependencies: 237
+-- Dependencies: 244
 -- Name: itinerary_site_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -738,7 +738,7 @@ ALTER SEQUENCE public.itinerary_site_id_seq OWNED BY public.itinerary_site.id;
 
 
 --
--- TOC entry 242 (class 1259 OID 20781)
+-- TOC entry 245 (class 1259 OID 21281)
 -- Name: travelloapp_destination; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -755,7 +755,7 @@ CREATE TABLE public.travelloapp_destination (
 ALTER TABLE public.travelloapp_destination OWNER TO postgres;
 
 --
--- TOC entry 241 (class 1259 OID 20780)
+-- TOC entry 246 (class 1259 OID 21286)
 -- Name: travelloapp_destination_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -771,7 +771,7 @@ ALTER TABLE public.travelloapp_destination_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3597 (class 0 OID 0)
--- Dependencies: 241
+-- Dependencies: 246
 -- Name: travelloapp_destination_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -779,7 +779,7 @@ ALTER SEQUENCE public.travelloapp_destination_id_seq OWNED BY public.travelloapp
 
 
 --
--- TOC entry 244 (class 1259 OID 20790)
+-- TOC entry 247 (class 1259 OID 21287)
 -- Name: travelloapp_tour; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -799,7 +799,7 @@ CREATE TABLE public.travelloapp_tour (
 ALTER TABLE public.travelloapp_tour OWNER TO postgres;
 
 --
--- TOC entry 243 (class 1259 OID 20789)
+-- TOC entry 248 (class 1259 OID 21290)
 -- Name: travelloapp_tour_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -815,7 +815,7 @@ ALTER TABLE public.travelloapp_tour_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3598 (class 0 OID 0)
--- Dependencies: 243
+-- Dependencies: 248
 -- Name: travelloapp_tour_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -823,7 +823,7 @@ ALTER SEQUENCE public.travelloapp_tour_id_seq OWNED BY public.travelloapp_tour.i
 
 
 --
--- TOC entry 3271 (class 2604 OID 20657)
+-- TOC entry 3262 (class 2604 OID 21291)
 -- Name: accounts_guide id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -831,7 +831,7 @@ ALTER TABLE ONLY public.accounts_guide ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 3270 (class 2604 OID 20646)
+-- TOC entry 3263 (class 2604 OID 21292)
 -- Name: accounts_member id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -839,7 +839,7 @@ ALTER TABLE ONLY public.accounts_member ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3265 (class 2604 OID 20555)
+-- TOC entry 3264 (class 2604 OID 21293)
 -- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -847,7 +847,7 @@ ALTER TABLE ONLY public.auth_group ALTER COLUMN id SET DEFAULT nextval('public.a
 
 
 --
--- TOC entry 3266 (class 2604 OID 20564)
+-- TOC entry 3265 (class 2604 OID 21294)
 -- Name: auth_group_permissions id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -855,7 +855,7 @@ ALTER TABLE ONLY public.auth_group_permissions ALTER COLUMN id SET DEFAULT nextv
 
 
 --
--- TOC entry 3264 (class 2604 OID 20548)
+-- TOC entry 3266 (class 2604 OID 21295)
 -- Name: auth_permission id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -863,7 +863,7 @@ ALTER TABLE ONLY public.auth_permission ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3267 (class 2604 OID 20571)
+-- TOC entry 3267 (class 2604 OID 21296)
 -- Name: auth_user id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -871,7 +871,7 @@ ALTER TABLE ONLY public.auth_user ALTER COLUMN id SET DEFAULT nextval('public.au
 
 
 --
--- TOC entry 3268 (class 2604 OID 20580)
+-- TOC entry 3268 (class 2604 OID 21297)
 -- Name: auth_user_groups id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -879,7 +879,7 @@ ALTER TABLE ONLY public.auth_user_groups ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3269 (class 2604 OID 20587)
+-- TOC entry 3269 (class 2604 OID 21298)
 -- Name: auth_user_user_permissions id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -887,7 +887,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT n
 
 
 --
--- TOC entry 3281 (class 2604 OID 20818)
+-- TOC entry 3270 (class 2604 OID 21299)
 -- Name: calc_order id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -895,7 +895,7 @@ ALTER TABLE ONLY public.calc_order ALTER COLUMN id SET DEFAULT nextval('public.c
 
 
 --
--- TOC entry 3272 (class 2604 OID 20677)
+-- TOC entry 3271 (class 2604 OID 21300)
 -- Name: django_admin_log id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -903,7 +903,7 @@ ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3263 (class 2604 OID 20539)
+-- TOC entry 3273 (class 2604 OID 21301)
 -- Name: django_content_type id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -911,7 +911,7 @@ ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
--- TOC entry 3262 (class 2604 OID 20530)
+-- TOC entry 3274 (class 2604 OID 21302)
 -- Name: django_migrations id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -919,7 +919,7 @@ ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 3274 (class 2604 OID 20707)
+-- TOC entry 3275 (class 2604 OID 21303)
 -- Name: itinerary_bus id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -927,7 +927,7 @@ ALTER TABLE ONLY public.itinerary_bus ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3275 (class 2604 OID 20714)
+-- TOC entry 3276 (class 2604 OID 21304)
 -- Name: itinerary_hotel id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -935,7 +935,7 @@ ALTER TABLE ONLY public.itinerary_hotel ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3278 (class 2604 OID 20735)
+-- TOC entry 3277 (class 2604 OID 21305)
 -- Name: itinerary_itinerary id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -943,7 +943,7 @@ ALTER TABLE ONLY public.itinerary_itinerary ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
--- TOC entry 3276 (class 2604 OID 20721)
+-- TOC entry 3278 (class 2604 OID 21306)
 -- Name: itinerary_restaurant id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -951,7 +951,7 @@ ALTER TABLE ONLY public.itinerary_restaurant ALTER COLUMN id SET DEFAULT nextval
 
 
 --
--- TOC entry 3277 (class 2604 OID 20728)
+-- TOC entry 3279 (class 2604 OID 21307)
 -- Name: itinerary_site id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -959,7 +959,7 @@ ALTER TABLE ONLY public.itinerary_site ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 3279 (class 2604 OID 20784)
+-- TOC entry 3280 (class 2604 OID 21308)
 -- Name: travelloapp_destination id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -967,7 +967,7 @@ ALTER TABLE ONLY public.travelloapp_destination ALTER COLUMN id SET DEFAULT next
 
 
 --
--- TOC entry 3280 (class 2604 OID 20793)
+-- TOC entry 3281 (class 2604 OID 21309)
 -- Name: travelloapp_tour id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -975,16 +975,11 @@ ALTER TABLE ONLY public.travelloapp_tour ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3554 (class 0 OID 20654)
--- Dependencies: 228
+-- TOC entry 3535 (class 0 OID 21194)
+-- Dependencies: 209
 -- Data for Name: accounts_guide; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.accounts_guide VALUES (1, 'Bertha', '2000-12-17', 'cn', 3, NULL);
-INSERT INTO public.accounts_guide VALUES (2, 'Timothy', '1997-04-06', 'cn', 26, NULL);
-INSERT INTO public.accounts_guide VALUES (3, 'James', '2002-09-06', 'spa', 0, NULL);
-INSERT INTO public.accounts_guide VALUES (4, 'Reginald', '2004-02-08', 'rus', 12, NULL);
-INSERT INTO public.accounts_guide VALUES (5, 'Bryan', '1960-03-07', 'eng', 8, NULL);
 INSERT INTO public.accounts_guide VALUES (6, 'Kathleen', '1981-07-18', 'cn', 21, NULL);
 INSERT INTO public.accounts_guide VALUES (7, 'Michael', '1969-03-26', 'cn', 24, NULL);
 INSERT INTO public.accounts_guide VALUES (8, 'Georgina', '2004-04-23', 'fr', 0, NULL);
@@ -1080,45 +1075,51 @@ INSERT INTO public.accounts_guide VALUES (97, 'Daniel', '1992-09-26', 'eng', 4, 
 INSERT INTO public.accounts_guide VALUES (98, 'Thomas', '1970-08-28', 'gre', 27, NULL);
 INSERT INTO public.accounts_guide VALUES (99, 'Arthur', '1964-01-23', 'eng', 37, NULL);
 INSERT INTO public.accounts_guide VALUES (100, 'Kyung', '1980-10-30', 'cn', 7, NULL);
+INSERT INTO public.accounts_guide VALUES (1, 'Bertha', '2000-12-17', 'cn', 3, 8);
+INSERT INTO public.accounts_guide VALUES (2, 'Timothy', '1997-04-06', 'cn', 26, 9);
+INSERT INTO public.accounts_guide VALUES (3, 'James', '2002-09-06', 'spa', 0, 10);
+INSERT INTO public.accounts_guide VALUES (4, 'Reginald', '2004-02-08', 'rus', 12, 11);
+INSERT INTO public.accounts_guide VALUES (5, 'Bryan', '1960-03-07', 'eng', 8, 12);
 
 
 --
--- TOC entry 3552 (class 0 OID 20643)
--- Dependencies: 226
+-- TOC entry 3537 (class 0 OID 21198)
+-- Dependencies: 211
 -- Data for Name: accounts_member; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.accounts_member VALUES (1, 'Joseph', '0982-004-441', 'M', '2013-05-07', 'Taiwan', '2016-04-26', NULL, 'josephbash13@iCloud.com');
-INSERT INTO public.accounts_member VALUES (2, 'Debi', '0961-300-252', 'F', '1986-02-11', 'Korea', '2018-10-18', NULL, 'debihersey@hotmail.com');
-INSERT INTO public.accounts_member VALUES (3, 'Gregory', '0958-361-674', 'M', '2013-05-25', 'Taiwan', '2019-02-19', NULL, 'gregorymuller0525@gmail.com');
-INSERT INTO public.accounts_member VALUES (4, 'Young', '0912-089-850', 'M', '1975-06-04', 'Russia', '2020-05-18', NULL, 'youngsutton0604@gmail.com');
-INSERT INTO public.accounts_member VALUES (5, 'Joyce', '0916-150-520', 'F', '1987-07-15', 'Switzerland', '2013-08-23', NULL, 'joyceclark1987@gmail.com');
 INSERT INTO public.accounts_member VALUES (6, 'Cheryl', '0989-795-812', 'F', '1997-06-11', 'Taiwan', '2016-11-02', NULL, 'cherylkoval97_0611@gmail.com');
 INSERT INTO public.accounts_member VALUES (7, 'Sofia', '0961-809-552', 'F', '1994-06-08', 'Taiwan', '2010-07-25', NULL, 'sofiadavis940608@gmail.com');
 INSERT INTO public.accounts_member VALUES (8, 'Annette', '0948-312-127', 'F', '1991-09-29', 'Iceland', '2016-11-28', NULL, 'annettebaker@hotmail.com');
 INSERT INTO public.accounts_member VALUES (9, 'Nichelle', '0980-576-328', 'F', '1940-10-17', 'Taiwan', '2015-06-05', NULL, 'nichellenewton40@gmail.com');
 INSERT INTO public.accounts_member VALUES (10, 'Fred', '0981-331-090', 'M', '1966-06-16', 'Taiwan', '2011-10-26', NULL, 'fredstringer@gmail.com');
+INSERT INTO public.accounts_member VALUES (1, 'Joseph', '0982-004-441', 'M', '2013-05-07', 'Taiwan', '2016-04-26', 2, 'josephbash13@iCloud.com');
+INSERT INTO public.accounts_member VALUES (3, 'Gregory', '0958-361-674', 'M', '2013-05-25', 'Taiwan', '2019-02-19', 3, 'gregorymuller0525@gmail.com');
+INSERT INTO public.accounts_member VALUES (4, 'Young', '0912-089-850', 'M', '1975-06-04', 'Russia', '2020-05-18', 4, 'youngsutton0604@gmail.com');
+INSERT INTO public.accounts_member VALUES (12, 'Ash', '0911111111', 'M', '2022-12-16', 'Taiwan', '2022-12-16', 7, 'qqq@qqq.com');
+INSERT INTO public.accounts_member VALUES (2, 'Debi', '0961-300-252', 'F', '1986-02-11', 'Korea', '2018-10-18', 13, 'debihersey@hotmail.com');
+INSERT INTO public.accounts_member VALUES (5, 'Joyce', '0916-150-520', 'F', '1987-07-15', 'Switzerland', '2013-08-23', 14, 'joyceclark1987@gmail.com');
 
 
 --
--- TOC entry 3542 (class 0 OID 20552)
--- Dependencies: 216
+-- TOC entry 3539 (class 0 OID 21204)
+-- Dependencies: 213
 -- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3544 (class 0 OID 20561)
--- Dependencies: 218
+-- TOC entry 3541 (class 0 OID 21208)
+-- Dependencies: 215
 -- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3540 (class 0 OID 20545)
--- Dependencies: 214
+-- TOC entry 3543 (class 0 OID 21212)
+-- Dependencies: 217
 -- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1193,33 +1194,44 @@ INSERT INTO public.auth_permission VALUES (68, 'Can view tourist', 17, 'view_tou
 
 
 --
--- TOC entry 3546 (class 0 OID 20568)
--- Dependencies: 220
+-- TOC entry 3545 (class 0 OID 21216)
+-- Dependencies: 219
 -- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.auth_user VALUES (1, 'pbkdf2_sha256$260000$MXDDGS28XlzKGm6vppvDxB$j9PU6zdlJC4pAplQ0Cly1nHf0VeVxavkFbTMOCdXwmM=', '2022-12-09 20:26:42.499673+08', true, 'super', '', '', 'super@gmail.com', true, true, '2022-12-09 20:26:23.131124+08');
+INSERT INTO public.auth_user VALUES (7, 'pbkdf2_sha256$260000$9Gbe0y7QkE1vijzjWlNbRl$sXl62sYXUTnthEX0S8Y0KtoJDwLmCj1Nr9xWU83UefU=', '2022-12-16 15:53:48.999321+08', false, 'Ashy', 'Ash', 'Ash', 'qqq@qqq.com', false, true, '2022-12-16 15:53:33.582026+08');
+INSERT INTO public.auth_user VALUES (8, 'pbkdf2_sha256$260000$ay84ChiMJJuu62oCkUG8Pe$vz48nm+U0Do75u4Uk6vvWYV+Ox5+H3yiLC4a/8JrYrk=', NULL, true, 'Bertha', '', '', 'bertha@gmail.com', true, true, '2022-12-16 17:09:30.967571+08');
+INSERT INTO public.auth_user VALUES (9, 'pbkdf2_sha256$260000$FtSJLqPiAtV4uVzqSN96vp$K94ZZzPCLA7zmSMe1PDecYQf7RTslXN1mvu4Jofbn6Q=', NULL, true, 'Timothy', '', '', 'timothy@timo.com', true, true, '2022-12-16 17:14:58.21118+08');
+INSERT INTO public.auth_user VALUES (10, 'pbkdf2_sha256$260000$Kr0jzfatNaXy4s5B089BDV$CGftjj7jnM7kivL+uyzgyTYlx3pQRNvWS5trTv91V7Q=', NULL, true, 'James', '', '', 'james@jjj.com', true, true, '2022-12-16 17:15:21.879545+08');
+INSERT INTO public.auth_user VALUES (11, 'pbkdf2_sha256$260000$sWF1fgLYF7YtfXKkVyv517$Rb7XQ/lbpSKzvDgA5eNTOUAUvHmwGpRRCcZtDF3hYV0=', NULL, true, 'Reginald', '', '', 'reginald@ewe.com', true, true, '2022-12-16 17:15:49.07833+08');
+INSERT INTO public.auth_user VALUES (12, 'pbkdf2_sha256$260000$JG7xR8nfh96T5gMR6ZfqhG$VybKEXftUTjLT6yofh1pVMR66cpF4FI3yIg1XjHT7FQ=', NULL, true, 'Byran', '', '', 'byran@ewe.com', true, true, '2022-12-16 17:16:22.747362+08');
+INSERT INTO public.auth_user VALUES (13, 'pbkdf2_sha256$260000$ygkzgatFd6IqhAyXjXzsXC$QfGKCnmvoallss/wJjkMpZuDJSOpxDuhhWsGGlK8ZFo=', NULL, false, 'Debi', 'Debi', 'Chen', 'debihersey@hotmail.com', false, true, '2022-12-16 17:24:35.461671+08');
+INSERT INTO public.auth_user VALUES (14, 'pbkdf2_sha256$260000$cpDVV2pvMrbarCkkdi6u2d$Ki6866J/cXwqeKxGHgntW+wWptOqH0lD9mg8Ncl9vTI=', NULL, false, 'Joyce', 'Joyce', 'Lin', 'joyceclark1987@gmail.com', false, true, '2022-12-16 17:25:50.496532+08');
+INSERT INTO public.auth_user VALUES (2, 'pbkdf2_sha256$260000$hvtAOXwoxhtCT4HwhuxLvO$RTgvgNY5vBNmvKwKxRTKhfb27hdjVdoJl2NRtfHuaC4=', NULL, false, 'Joseph', 'Joseph', 'Bash', 'josephbash13@iCloud.com', false, true, '2022-12-16 11:03:36.410782+08');
+INSERT INTO public.auth_user VALUES (3, 'pbkdf2_sha256$260000$0joLRhwz2s8B68eXLlY7QM$2vWbwyhbz0gapeSTKFx+sqQ/WDW8euIRkHFQdpIFV5s=', NULL, false, 'Gregory', 'Gregory', 'Muller', 'gregorymuller0525@gmail.com', false, true, '2022-12-16 15:04:40.902569+08');
+INSERT INTO public.auth_user VALUES (4, 'pbkdf2_sha256$260000$en70SOWXGoEts2iNRwOsKv$pDCufNbuB0NAxw8VVUBrI9kP9KNxF8dZR2ilpqRv6X8=', NULL, false, 'Young', 'Young', 'Sutton', 'youngsutton0604@gmail.com', false, true, '2022-12-16 15:09:19.279434+08');
 
 
 --
--- TOC entry 3548 (class 0 OID 20577)
--- Dependencies: 222
+-- TOC entry 3546 (class 0 OID 21221)
+-- Dependencies: 220
 -- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3550 (class 0 OID 20584)
--- Dependencies: 224
+-- TOC entry 3549 (class 0 OID 21226)
+-- Dependencies: 223
 -- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3572 (class 0 OID 20815)
--- Dependencies: 246
+-- TOC entry 3551 (class 0 OID 21230)
+-- Dependencies: 225
 -- Data for Name: calc_order; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1228,8 +1240,8 @@ INSERT INTO public.calc_order VALUES (2, 22, 10, 1, 1287000);
 
 
 --
--- TOC entry 3573 (class 0 OID 20821)
--- Dependencies: 247
+-- TOC entry 3553 (class 0 OID 21234)
+-- Dependencies: 227
 -- Data for Name: calc_tourist; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1290,16 +1302,16 @@ INSERT INTO public.calc_tourist VALUES ('A116956220', 'Gary', 'without any', 'no
 
 
 --
--- TOC entry 3556 (class 0 OID 20674)
--- Dependencies: 230
+-- TOC entry 3554 (class 0 OID 21239)
+-- Dependencies: 228
 -- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3538 (class 0 OID 20536)
--- Dependencies: 212
+-- TOC entry 3556 (class 0 OID 21246)
+-- Dependencies: 230
 -- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1323,8 +1335,8 @@ INSERT INTO public.django_content_type VALUES (17, 'calc', 'tourist');
 
 
 --
--- TOC entry 3536 (class 0 OID 20527)
--- Dependencies: 210
+-- TOC entry 3558 (class 0 OID 21250)
+-- Dependencies: 232
 -- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1358,17 +1370,16 @@ INSERT INTO public.django_migrations VALUES (27, 'calc', '0003_auto_20221209_213
 
 
 --
--- TOC entry 3574 (class 0 OID 20845)
--- Dependencies: 248
+-- TOC entry 3560 (class 0 OID 21256)
+-- Dependencies: 234
 -- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.django_session VALUES ('oz6l6hc92qb61ikl8d1818ceiicswv63', '.eJxVjMsOwiAQRf-FtSHAMFBcuvcbyMxAbdXQpI-V8d-1SRe6veec-1KZtnXI21LnPBZ1VladfjcmedS2g3Kndpu0TG2dR9a7og-66OtU6vNyuH8HAy3Dt3ZUKTIUSdSjSwbBJ2HbxRA8gnApEMGK6Ty7gDGyR4sAru9MdBKMen8A2mw22w:1p3cSg:Py4PONmuX2Jot3bfFZKo8jRg_HeoqQbwq9RS90Ur_g4', '2022-12-23 20:26:42.528396+08');
 
 
 --
--- TOC entry 3558 (class 0 OID 20704)
--- Dependencies: 232
+-- TOC entry 3561 (class 0 OID 21261)
+-- Dependencies: 235
 -- Data for Name: itinerary_bus; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1385,8 +1396,8 @@ INSERT INTO public.itinerary_bus VALUES (10, 'Donna', 'diamler', 2018, 20);
 
 
 --
--- TOC entry 3560 (class 0 OID 20711)
--- Dependencies: 234
+-- TOC entry 3563 (class 0 OID 21265)
+-- Dependencies: 237
 -- Data for Name: itinerary_hotel; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1403,8 +1414,8 @@ INSERT INTO public.itinerary_hotel VALUES (10, 'hotel phoneix', 'city center');
 
 
 --
--- TOC entry 3566 (class 0 OID 20732)
--- Dependencies: 240
+-- TOC entry 3565 (class 0 OID 21269)
+-- Dependencies: 239
 -- Data for Name: itinerary_itinerary; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1431,8 +1442,8 @@ INSERT INTO public.itinerary_itinerary VALUES (20, 2, 7, 3, 7, 3, 3, 3);
 
 
 --
--- TOC entry 3562 (class 0 OID 20718)
--- Dependencies: 236
+-- TOC entry 3567 (class 0 OID 21273)
+-- Dependencies: 241
 -- Data for Name: itinerary_restaurant; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1449,8 +1460,8 @@ INSERT INTO public.itinerary_restaurant VALUES (10, 'indian room kimchi', 'rural
 
 
 --
--- TOC entry 3564 (class 0 OID 20725)
--- Dependencies: 238
+-- TOC entry 3569 (class 0 OID 21277)
+-- Dependencies: 243
 -- Data for Name: itinerary_site; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1467,16 +1478,16 @@ INSERT INTO public.itinerary_site VALUES (10, 'entertainment venue', 'city cente
 
 
 --
--- TOC entry 3568 (class 0 OID 20781)
--- Dependencies: 242
+-- TOC entry 3571 (class 0 OID 21281)
+-- Dependencies: 245
 -- Data for Name: travelloapp_destination; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3570 (class 0 OID 20790)
--- Dependencies: 244
+-- TOC entry 3573 (class 0 OID 21287)
+-- Dependencies: 247
 -- Data for Name: travelloapp_tour; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1485,7 +1496,7 @@ INSERT INTO public.travelloapp_tour VALUES (1, '2024-01-05', 58500, 'tour', 54, 
 
 --
 -- TOC entry 3599 (class 0 OID 0)
--- Dependencies: 227
+-- Dependencies: 210
 -- Name: accounts_guide_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1494,16 +1505,16 @@ SELECT pg_catalog.setval('public.accounts_guide_id_seq', 1, false);
 
 --
 -- TOC entry 3600 (class 0 OID 0)
--- Dependencies: 225
+-- Dependencies: 212
 -- Name: accounts_member_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.accounts_member_id_seq', 1, false);
+SELECT pg_catalog.setval('public.accounts_member_id_seq', 12, true);
 
 
 --
 -- TOC entry 3601 (class 0 OID 0)
--- Dependencies: 215
+-- Dependencies: 214
 -- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1512,7 +1523,7 @@ SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
 
 --
 -- TOC entry 3602 (class 0 OID 0)
--- Dependencies: 217
+-- Dependencies: 216
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1521,7 +1532,7 @@ SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
 
 --
 -- TOC entry 3603 (class 0 OID 0)
--- Dependencies: 213
+-- Dependencies: 218
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1539,16 +1550,16 @@ SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
 
 --
 -- TOC entry 3605 (class 0 OID 0)
--- Dependencies: 219
+-- Dependencies: 222
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_user_id_seq', 1, true);
+SELECT pg_catalog.setval('public.auth_user_id_seq', 14, true);
 
 
 --
 -- TOC entry 3606 (class 0 OID 0)
--- Dependencies: 223
+-- Dependencies: 224
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1557,7 +1568,7 @@ SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
 
 --
 -- TOC entry 3607 (class 0 OID 0)
--- Dependencies: 245
+-- Dependencies: 226
 -- Name: calc_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1575,7 +1586,7 @@ SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
 
 --
 -- TOC entry 3609 (class 0 OID 0)
--- Dependencies: 211
+-- Dependencies: 231
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1584,7 +1595,7 @@ SELECT pg_catalog.setval('public.django_content_type_id_seq', 17, true);
 
 --
 -- TOC entry 3610 (class 0 OID 0)
--- Dependencies: 209
+-- Dependencies: 233
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1593,7 +1604,7 @@ SELECT pg_catalog.setval('public.django_migrations_id_seq', 27, true);
 
 --
 -- TOC entry 3611 (class 0 OID 0)
--- Dependencies: 231
+-- Dependencies: 236
 -- Name: itinerary_bus_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1602,7 +1613,7 @@ SELECT pg_catalog.setval('public.itinerary_bus_id_seq', 1, false);
 
 --
 -- TOC entry 3612 (class 0 OID 0)
--- Dependencies: 233
+-- Dependencies: 238
 -- Name: itinerary_hotel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1611,7 +1622,7 @@ SELECT pg_catalog.setval('public.itinerary_hotel_id_seq', 1, false);
 
 --
 -- TOC entry 3613 (class 0 OID 0)
--- Dependencies: 239
+-- Dependencies: 240
 -- Name: itinerary_itinerary_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1620,7 +1631,7 @@ SELECT pg_catalog.setval('public.itinerary_itinerary_id_seq', 1, false);
 
 --
 -- TOC entry 3614 (class 0 OID 0)
--- Dependencies: 235
+-- Dependencies: 242
 -- Name: itinerary_restaurant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1629,7 +1640,7 @@ SELECT pg_catalog.setval('public.itinerary_restaurant_id_seq', 1, false);
 
 --
 -- TOC entry 3615 (class 0 OID 0)
--- Dependencies: 237
+-- Dependencies: 244
 -- Name: itinerary_site_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1638,7 +1649,7 @@ SELECT pg_catalog.setval('public.itinerary_site_id_seq', 1, false);
 
 --
 -- TOC entry 3616 (class 0 OID 0)
--- Dependencies: 241
+-- Dependencies: 246
 -- Name: travelloapp_destination_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1647,7 +1658,7 @@ SELECT pg_catalog.setval('public.travelloapp_destination_id_seq', 1, false);
 
 --
 -- TOC entry 3617 (class 0 OID 0)
--- Dependencies: 243
+-- Dependencies: 248
 -- Name: travelloapp_tour_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -1655,7 +1666,7 @@ SELECT pg_catalog.setval('public.travelloapp_tour_id_seq', 1, false);
 
 
 --
--- TOC entry 3329 (class 2606 OID 20659)
+-- TOC entry 3283 (class 2606 OID 21311)
 -- Name: accounts_guide accounts_guide_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1664,7 +1675,7 @@ ALTER TABLE ONLY public.accounts_guide
 
 
 --
--- TOC entry 3331 (class 2606 OID 20661)
+-- TOC entry 3285 (class 2606 OID 21313)
 -- Name: accounts_guide accounts_guide_user_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1673,7 +1684,7 @@ ALTER TABLE ONLY public.accounts_guide
 
 
 --
--- TOC entry 3323 (class 2606 OID 20650)
+-- TOC entry 3288 (class 2606 OID 21315)
 -- Name: accounts_member accounts_member_phone_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1682,7 +1693,7 @@ ALTER TABLE ONLY public.accounts_member
 
 
 --
--- TOC entry 3325 (class 2606 OID 20648)
+-- TOC entry 3290 (class 2606 OID 21317)
 -- Name: accounts_member accounts_member_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1691,7 +1702,7 @@ ALTER TABLE ONLY public.accounts_member
 
 
 --
--- TOC entry 3327 (class 2606 OID 20652)
+-- TOC entry 3292 (class 2606 OID 21319)
 -- Name: accounts_member accounts_member_user_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1700,7 +1711,7 @@ ALTER TABLE ONLY public.accounts_member
 
 
 --
--- TOC entry 3295 (class 2606 OID 20701)
+-- TOC entry 3295 (class 2606 OID 21321)
 -- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1709,7 +1720,7 @@ ALTER TABLE ONLY public.auth_group
 
 
 --
--- TOC entry 3300 (class 2606 OID 20600)
+-- TOC entry 3300 (class 2606 OID 21323)
 -- Name: auth_group_permissions auth_group_permissions_group_id_permission_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1718,7 +1729,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 3303 (class 2606 OID 20566)
+-- TOC entry 3303 (class 2606 OID 21325)
 -- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1727,7 +1738,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 3297 (class 2606 OID 20557)
+-- TOC entry 3297 (class 2606 OID 21327)
 -- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1736,7 +1747,7 @@ ALTER TABLE ONLY public.auth_group
 
 
 --
--- TOC entry 3290 (class 2606 OID 20591)
+-- TOC entry 3306 (class 2606 OID 21329)
 -- Name: auth_permission auth_permission_content_type_id_codename_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1745,7 +1756,7 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 3292 (class 2606 OID 20550)
+-- TOC entry 3308 (class 2606 OID 21331)
 -- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1754,7 +1765,7 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 3311 (class 2606 OID 20582)
+-- TOC entry 3316 (class 2606 OID 21333)
 -- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1763,7 +1774,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 3314 (class 2606 OID 20615)
+-- TOC entry 3319 (class 2606 OID 21335)
 -- Name: auth_user_groups auth_user_groups_user_id_group_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1772,7 +1783,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 3305 (class 2606 OID 20573)
+-- TOC entry 3310 (class 2606 OID 21337)
 -- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1781,7 +1792,7 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- TOC entry 3317 (class 2606 OID 20589)
+-- TOC entry 3322 (class 2606 OID 21339)
 -- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1790,7 +1801,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 3320 (class 2606 OID 20629)
+-- TOC entry 3325 (class 2606 OID 21341)
 -- Name: auth_user_user_permissions auth_user_user_permissions_user_id_permission_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1799,7 +1810,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 3308 (class 2606 OID 20696)
+-- TOC entry 3313 (class 2606 OID 21343)
 -- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1808,7 +1819,7 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- TOC entry 3362 (class 2606 OID 20820)
+-- TOC entry 3328 (class 2606 OID 21345)
 -- Name: calc_order calc_order_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1817,7 +1828,7 @@ ALTER TABLE ONLY public.calc_order
 
 
 --
--- TOC entry 3367 (class 2606 OID 20825)
+-- TOC entry 3333 (class 2606 OID 21347)
 -- Name: calc_tourist calc_tourist_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1826,7 +1837,7 @@ ALTER TABLE ONLY public.calc_tourist
 
 
 --
--- TOC entry 3334 (class 2606 OID 20682)
+-- TOC entry 3336 (class 2606 OID 21349)
 -- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1835,7 +1846,7 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 3285 (class 2606 OID 20543)
+-- TOC entry 3339 (class 2606 OID 21351)
 -- Name: django_content_type django_content_type_app_label_model_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1844,7 +1855,7 @@ ALTER TABLE ONLY public.django_content_type
 
 
 --
--- TOC entry 3287 (class 2606 OID 20541)
+-- TOC entry 3341 (class 2606 OID 21353)
 -- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1853,7 +1864,7 @@ ALTER TABLE ONLY public.django_content_type
 
 
 --
--- TOC entry 3283 (class 2606 OID 20534)
+-- TOC entry 3343 (class 2606 OID 21355)
 -- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1862,7 +1873,7 @@ ALTER TABLE ONLY public.django_migrations
 
 
 --
--- TOC entry 3370 (class 2606 OID 20851)
+-- TOC entry 3346 (class 2606 OID 21357)
 -- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1871,7 +1882,7 @@ ALTER TABLE ONLY public.django_session
 
 
 --
--- TOC entry 3337 (class 2606 OID 20709)
+-- TOC entry 3349 (class 2606 OID 21359)
 -- Name: itinerary_bus itinerary_bus_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1880,7 +1891,7 @@ ALTER TABLE ONLY public.itinerary_bus
 
 
 --
--- TOC entry 3339 (class 2606 OID 20716)
+-- TOC entry 3351 (class 2606 OID 21361)
 -- Name: itinerary_hotel itinerary_hotel_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1889,7 +1900,7 @@ ALTER TABLE ONLY public.itinerary_hotel
 
 
 --
--- TOC entry 3348 (class 2606 OID 20737)
+-- TOC entry 3356 (class 2606 OID 21363)
 -- Name: itinerary_itinerary itinerary_itinerary_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1898,7 +1909,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3341 (class 2606 OID 20723)
+-- TOC entry 3362 (class 2606 OID 21365)
 -- Name: itinerary_restaurant itinerary_restaurant_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1907,7 +1918,7 @@ ALTER TABLE ONLY public.itinerary_restaurant
 
 
 --
--- TOC entry 3343 (class 2606 OID 20730)
+-- TOC entry 3364 (class 2606 OID 21367)
 -- Name: itinerary_site itinerary_site_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1916,7 +1927,7 @@ ALTER TABLE ONLY public.itinerary_site
 
 
 --
--- TOC entry 3354 (class 2606 OID 20788)
+-- TOC entry 3366 (class 2606 OID 21369)
 -- Name: travelloapp_destination travelloapp_destination_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1925,7 +1936,7 @@ ALTER TABLE ONLY public.travelloapp_destination
 
 
 --
--- TOC entry 3359 (class 2606 OID 20795)
+-- TOC entry 3371 (class 2606 OID 21371)
 -- Name: travelloapp_tour travelloapp_tour_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1934,7 +1945,7 @@ ALTER TABLE ONLY public.travelloapp_tour
 
 
 --
--- TOC entry 3321 (class 1259 OID 20667)
+-- TOC entry 3286 (class 1259 OID 21372)
 -- Name: accounts_member_phone_8574165a_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1942,7 +1953,7 @@ CREATE INDEX accounts_member_phone_8574165a_like ON public.accounts_member USING
 
 
 --
--- TOC entry 3293 (class 1259 OID 20702)
+-- TOC entry 3293 (class 1259 OID 21373)
 -- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1950,7 +1961,7 @@ CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (nam
 
 
 --
--- TOC entry 3298 (class 1259 OID 20611)
+-- TOC entry 3298 (class 1259 OID 21374)
 -- Name: auth_group_permissions_group_id_b120cbf9; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1958,7 +1969,7 @@ CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permi
 
 
 --
--- TOC entry 3301 (class 1259 OID 20612)
+-- TOC entry 3301 (class 1259 OID 21375)
 -- Name: auth_group_permissions_permission_id_84c5c92e; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1966,7 +1977,7 @@ CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_
 
 
 --
--- TOC entry 3288 (class 1259 OID 20597)
+-- TOC entry 3304 (class 1259 OID 21376)
 -- Name: auth_permission_content_type_id_2f476e4b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1974,7 +1985,7 @@ CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission 
 
 
 --
--- TOC entry 3309 (class 1259 OID 20627)
+-- TOC entry 3314 (class 1259 OID 21377)
 -- Name: auth_user_groups_group_id_97559544; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1982,7 +1993,7 @@ CREATE INDEX auth_user_groups_group_id_97559544 ON public.auth_user_groups USING
 
 
 --
--- TOC entry 3312 (class 1259 OID 20626)
+-- TOC entry 3317 (class 1259 OID 21378)
 -- Name: auth_user_groups_user_id_6a12ed8b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1990,7 +2001,7 @@ CREATE INDEX auth_user_groups_user_id_6a12ed8b ON public.auth_user_groups USING 
 
 
 --
--- TOC entry 3315 (class 1259 OID 20641)
+-- TOC entry 3320 (class 1259 OID 21379)
 -- Name: auth_user_user_permissions_permission_id_1fbb5f2c; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1998,7 +2009,7 @@ CREATE INDEX auth_user_user_permissions_permission_id_1fbb5f2c ON public.auth_us
 
 
 --
--- TOC entry 3318 (class 1259 OID 20640)
+-- TOC entry 3323 (class 1259 OID 21380)
 -- Name: auth_user_user_permissions_user_id_a95ead1b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2006,7 +2017,7 @@ CREATE INDEX auth_user_user_permissions_user_id_a95ead1b ON public.auth_user_use
 
 
 --
--- TOC entry 3306 (class 1259 OID 20697)
+-- TOC entry 3311 (class 1259 OID 21381)
 -- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2014,7 +2025,7 @@ CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (u
 
 
 --
--- TOC entry 3360 (class 1259 OID 20836)
+-- TOC entry 3326 (class 1259 OID 21382)
 -- Name: calc_order_member_id_17ba6fe1; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2022,7 +2033,7 @@ CREATE INDEX calc_order_member_id_17ba6fe1 ON public.calc_order USING btree (mem
 
 
 --
--- TOC entry 3363 (class 1259 OID 20837)
+-- TOC entry 3329 (class 1259 OID 21383)
 -- Name: calc_order_tour_id_6f621a1b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2030,7 +2041,7 @@ CREATE INDEX calc_order_tour_id_6f621a1b ON public.calc_order USING btree (tour_
 
 
 --
--- TOC entry 3364 (class 1259 OID 20843)
+-- TOC entry 3330 (class 1259 OID 21384)
 -- Name: calc_tourist_id_692812a1_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2038,7 +2049,7 @@ CREATE INDEX calc_tourist_id_692812a1_like ON public.calc_tourist USING btree (i
 
 
 --
--- TOC entry 3365 (class 1259 OID 20844)
+-- TOC entry 3331 (class 1259 OID 21385)
 -- Name: calc_tourist_order_id_580a9bf4; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2046,7 +2057,7 @@ CREATE INDEX calc_tourist_order_id_580a9bf4 ON public.calc_tourist USING btree (
 
 
 --
--- TOC entry 3332 (class 1259 OID 20693)
+-- TOC entry 3334 (class 1259 OID 21386)
 -- Name: django_admin_log_content_type_id_c4bce8eb; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2054,7 +2065,7 @@ CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_lo
 
 
 --
--- TOC entry 3335 (class 1259 OID 20694)
+-- TOC entry 3337 (class 1259 OID 21387)
 -- Name: django_admin_log_user_id_c564eba6; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2062,7 +2073,7 @@ CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING 
 
 
 --
--- TOC entry 3368 (class 1259 OID 20853)
+-- TOC entry 3344 (class 1259 OID 21388)
 -- Name: django_session_expire_date_a5c62663; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2070,7 +2081,7 @@ CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING 
 
 
 --
--- TOC entry 3371 (class 1259 OID 20852)
+-- TOC entry 3347 (class 1259 OID 21389)
 -- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2078,7 +2089,7 @@ CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session U
 
 
 --
--- TOC entry 3344 (class 1259 OID 20773)
+-- TOC entry 3352 (class 1259 OID 21390)
 -- Name: itinerary_itinerary_hotel1_id_10a3bf45; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2086,7 +2097,7 @@ CREATE INDEX itinerary_itinerary_hotel1_id_10a3bf45 ON public.itinerary_itinerar
 
 
 --
--- TOC entry 3345 (class 1259 OID 20774)
+-- TOC entry 3353 (class 1259 OID 21391)
 -- Name: itinerary_itinerary_lunch1_id_347197f0; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2094,7 +2105,7 @@ CREATE INDEX itinerary_itinerary_lunch1_id_347197f0 ON public.itinerary_itinerar
 
 
 --
--- TOC entry 3346 (class 1259 OID 20775)
+-- TOC entry 3354 (class 1259 OID 21392)
 -- Name: itinerary_itinerary_lunch2_id_f5eadfad; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2102,7 +2113,7 @@ CREATE INDEX itinerary_itinerary_lunch2_id_f5eadfad ON public.itinerary_itinerar
 
 
 --
--- TOC entry 3349 (class 1259 OID 20776)
+-- TOC entry 3357 (class 1259 OID 21393)
 -- Name: itinerary_itinerary_site1_id_0595b2ff; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2110,7 +2121,7 @@ CREATE INDEX itinerary_itinerary_site1_id_0595b2ff ON public.itinerary_itinerary
 
 
 --
--- TOC entry 3350 (class 1259 OID 20777)
+-- TOC entry 3358 (class 1259 OID 21394)
 -- Name: itinerary_itinerary_site2_id_62f57699; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2118,7 +2129,7 @@ CREATE INDEX itinerary_itinerary_site2_id_62f57699 ON public.itinerary_itinerary
 
 
 --
--- TOC entry 3351 (class 1259 OID 20778)
+-- TOC entry 3359 (class 1259 OID 21395)
 -- Name: itinerary_itinerary_site3_id_3b95195f; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2126,7 +2137,7 @@ CREATE INDEX itinerary_itinerary_site3_id_3b95195f ON public.itinerary_itinerary
 
 
 --
--- TOC entry 3352 (class 1259 OID 20779)
+-- TOC entry 3360 (class 1259 OID 21396)
 -- Name: itinerary_itinerary_site4_id_5d55594a; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2134,7 +2145,7 @@ CREATE INDEX itinerary_itinerary_site4_id_5d55594a ON public.itinerary_itinerary
 
 
 --
--- TOC entry 3355 (class 1259 OID 20811)
+-- TOC entry 3367 (class 1259 OID 21397)
 -- Name: travelloapp_tour_bus_id_af12898f; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2142,7 +2153,7 @@ CREATE INDEX travelloapp_tour_bus_id_af12898f ON public.travelloapp_tour USING b
 
 
 --
--- TOC entry 3356 (class 1259 OID 20812)
+-- TOC entry 3368 (class 1259 OID 21398)
 -- Name: travelloapp_tour_guide_id_f30353f7; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2150,7 +2161,7 @@ CREATE INDEX travelloapp_tour_guide_id_f30353f7 ON public.travelloapp_tour USING
 
 
 --
--- TOC entry 3357 (class 1259 OID 20813)
+-- TOC entry 3369 (class 1259 OID 21399)
 -- Name: travelloapp_tour_itinerary_plan_id_bcda57ae; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2158,7 +2169,7 @@ CREATE INDEX travelloapp_tour_itinerary_plan_id_bcda57ae ON public.travelloapp_t
 
 
 --
--- TOC entry 3380 (class 2606 OID 20668)
+-- TOC entry 3372 (class 2606 OID 21400)
 -- Name: accounts_guide accounts_guide_user_id_4cbaaa6d_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2167,7 +2178,7 @@ ALTER TABLE ONLY public.accounts_guide
 
 
 --
--- TOC entry 3379 (class 2606 OID 20857)
+-- TOC entry 3373 (class 2606 OID 21405)
 -- Name: accounts_member accounts_member_user_id_b994c8b6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2176,7 +2187,7 @@ ALTER TABLE ONLY public.accounts_member
 
 
 --
--- TOC entry 3374 (class 2606 OID 20606)
+-- TOC entry 3374 (class 2606 OID 21410)
 -- Name: auth_group_permissions auth_group_permissio_permission_id_84c5c92e_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2185,7 +2196,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 3373 (class 2606 OID 20601)
+-- TOC entry 3375 (class 2606 OID 21415)
 -- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2194,7 +2205,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 3372 (class 2606 OID 20592)
+-- TOC entry 3376 (class 2606 OID 21420)
 -- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2203,7 +2214,7 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 3376 (class 2606 OID 20621)
+-- TOC entry 3377 (class 2606 OID 21425)
 -- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2212,7 +2223,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 3375 (class 2606 OID 20616)
+-- TOC entry 3378 (class 2606 OID 21430)
 -- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2221,7 +2232,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 3378 (class 2606 OID 20635)
+-- TOC entry 3379 (class 2606 OID 21435)
 -- Name: auth_user_user_permissions auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2230,7 +2241,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 3377 (class 2606 OID 20630)
+-- TOC entry 3380 (class 2606 OID 21440)
 -- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2239,7 +2250,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 3393 (class 2606 OID 20826)
+-- TOC entry 3381 (class 2606 OID 21445)
 -- Name: calc_order calc_order_member_id_17ba6fe1_fk_accounts_member_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2248,7 +2259,7 @@ ALTER TABLE ONLY public.calc_order
 
 
 --
--- TOC entry 3394 (class 2606 OID 20831)
+-- TOC entry 3382 (class 2606 OID 21450)
 -- Name: calc_order calc_order_tour_id_6f621a1b_fk_travelloapp_tour_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2257,7 +2268,7 @@ ALTER TABLE ONLY public.calc_order
 
 
 --
--- TOC entry 3395 (class 2606 OID 20838)
+-- TOC entry 3383 (class 2606 OID 21455)
 -- Name: calc_tourist calc_tourist_order_id_580a9bf4_fk_calc_order_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2266,7 +2277,7 @@ ALTER TABLE ONLY public.calc_tourist
 
 
 --
--- TOC entry 3381 (class 2606 OID 20683)
+-- TOC entry 3384 (class 2606 OID 21460)
 -- Name: django_admin_log django_admin_log_content_type_id_c4bce8eb_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2275,7 +2286,7 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 3382 (class 2606 OID 20688)
+-- TOC entry 3385 (class 2606 OID 21465)
 -- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2284,7 +2295,7 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 3383 (class 2606 OID 20738)
+-- TOC entry 3386 (class 2606 OID 21470)
 -- Name: itinerary_itinerary itinerary_itinerary_hotel1_id_10a3bf45_fk_itinerary_hotel_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2293,7 +2304,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3384 (class 2606 OID 20743)
+-- TOC entry 3387 (class 2606 OID 21475)
 -- Name: itinerary_itinerary itinerary_itinerary_lunch1_id_347197f0_fk_itinerary; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2302,7 +2313,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3385 (class 2606 OID 20748)
+-- TOC entry 3388 (class 2606 OID 21480)
 -- Name: itinerary_itinerary itinerary_itinerary_lunch2_id_f5eadfad_fk_itinerary; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2311,7 +2322,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3386 (class 2606 OID 20753)
+-- TOC entry 3389 (class 2606 OID 21485)
 -- Name: itinerary_itinerary itinerary_itinerary_site1_id_0595b2ff_fk_itinerary_site_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2320,7 +2331,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3387 (class 2606 OID 20758)
+-- TOC entry 3390 (class 2606 OID 21490)
 -- Name: itinerary_itinerary itinerary_itinerary_site2_id_62f57699_fk_itinerary_site_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2329,7 +2340,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3388 (class 2606 OID 20763)
+-- TOC entry 3391 (class 2606 OID 21495)
 -- Name: itinerary_itinerary itinerary_itinerary_site3_id_3b95195f_fk_itinerary_site_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2338,7 +2349,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3389 (class 2606 OID 20768)
+-- TOC entry 3392 (class 2606 OID 21500)
 -- Name: itinerary_itinerary itinerary_itinerary_site4_id_5d55594a_fk_itinerary_site_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2347,7 +2358,7 @@ ALTER TABLE ONLY public.itinerary_itinerary
 
 
 --
--- TOC entry 3390 (class 2606 OID 20796)
+-- TOC entry 3393 (class 2606 OID 21505)
 -- Name: travelloapp_tour travelloapp_tour_bus_id_af12898f_fk_itinerary_bus_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2356,7 +2367,7 @@ ALTER TABLE ONLY public.travelloapp_tour
 
 
 --
--- TOC entry 3391 (class 2606 OID 20801)
+-- TOC entry 3394 (class 2606 OID 21510)
 -- Name: travelloapp_tour travelloapp_tour_guide_id_f30353f7_fk_accounts_guide_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2365,7 +2376,7 @@ ALTER TABLE ONLY public.travelloapp_tour
 
 
 --
--- TOC entry 3392 (class 2606 OID 20806)
+-- TOC entry 3395 (class 2606 OID 21515)
 -- Name: travelloapp_tour travelloapp_tour_itinerary_plan_id_bcda57ae_fk_itinerary; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2373,7 +2384,7 @@ ALTER TABLE ONLY public.travelloapp_tour
     ADD CONSTRAINT travelloapp_tour_itinerary_plan_id_bcda57ae_fk_itinerary FOREIGN KEY (itinerary_plan_id) REFERENCES public.itinerary_itinerary(id) DEFERRABLE INITIALLY DEFERRED;
 
 
--- Completed on 2022-12-09 21:39:41
+-- Completed on 2022-12-16 17:49:00
 
 --
 -- PostgreSQL database dump complete

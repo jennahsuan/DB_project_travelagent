@@ -81,35 +81,35 @@ def contact(request):
     return render(request, 'contact.html')
 
 
-def add_employee(request):
-    form = CreateUserForm()
-    form2 = CreateEmployeeForm()
+# def add_employee(request):
+#     form = CreateUserForm()
+#     form2 = CreateEmployeeForm()
 
-    if request.method == 'POST':
-        post = request.POST.copy()  # to make it mutable
-        # post['phoneNumber'] = "+90" + post['phoneNumber']
-        request.POST = post
+#     if request.method == 'POST':
+#         post = request.POST.copy()  # to make it mutable
+#         # post['phoneNumber'] = "+90" + post['phoneNumber']
+#         request.POST = post
 
-        form = CreateUserForm(request.POST)
-        form2 = CreateEmployeeForm(request.POST)
+#         form = CreateUserForm(request.POST)
+#         form2 = CreateEmployeeForm(request.POST)
 
-        if form.is_valid() and form2.is_valid():
-            user = form.save()
-            employee = form2.save()
-            employee.user = user
-            employee.save()
+#         if form.is_valid() and form2.is_valid():
+#             user = form.save()
+#             employee = form2.save()
+#             employee.user = user
+#             employee.save()
 
-            username = form.cleaned_data.get('username')
-            # role = form2.cleaned_data.get("ROLES_TYPES")
-            # group = Group.objects.get(name=role)
-            # user.groups.add(group)
+#             username = form.cleaned_data.get('username')
+#             # role = form2.cleaned_data.get("ROLES_TYPES")
+#             # group = Group.objects.get(name=role)
+#             # user.groups.add(group)
 
-            messages.success(
-                request, ' Account Was Created Succesfuly For ' + username)
+#             messages.success(
+#                 request, ' Account Was Created Succesfuly For ' + username)
 
-            return redirect('employees')
-    context = {
-        'form': form,
-        'form2': form2,
-    }
-    return render(request, "add-employee.html", context)
+#             return redirect('employees')
+#     context = {
+#         'form': form,
+#         'form2': form2,
+#     }
+#     return render(request, "add-employee.html", context)
