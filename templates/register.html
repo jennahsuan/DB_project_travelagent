@@ -135,6 +135,10 @@
                     border-radius: 12px;">
 						<form action="register" method="POST" id="contact_form" class="contact_form">
                             {% csrf_token %}
+							<div style="margin-bottom: 18px"><input type="text" name="username" class="contact_input contact_input_name inpt" placeholder="Username" required="required"><div class="input_border"></div></div>
+							<div style="margin-bottom: 18px"><input type="password" name="password1" class="contact_input contact_input_subject inpt" placeholder="Password" required="required"><div class="input_border"></div></div>
+							<div style="margin-bottom: 18px"><input type="password" name="password2" class="contact_input contact_input_subject inpt" placeholder="Confirm Password" required="required"><div class="input_border"></div></div>
+							
                             <div class="row">
 								<div class="col-lg-6" style="margin-bottom: 18px">
 									<div><input type="text" name="first_name" class="contact_input contact_input_email inpt" placeholder="First Name" required="required"><div class="input_border"></div></div>
@@ -143,12 +147,23 @@
 									<div><input type="text" name="last_name" class="contact_input contact_input_subject inpt" placeholder="Last Name" required="required"><div class="input_border"></div></div>
 								</div>
 							</div>
-							<div style="margin-bottom: 18px"><input type="text" name="username" class="contact_input contact_input_name inpt" placeholder="Username" required="required"><div class="input_border"></div></div>
-                            <div style="margin-bottom: 18px"><input type="email" name="email" class="contact_input contact_input_email inpt" placeholder="Your E-mail" required="required"><div class="input_border"></div></div>
-							<!-- need phone, nation, gender here -->
-                            <div style="margin-bottom: 18px"><input type="password" name="password1" class="contact_input contact_input_subject inpt" placeholder="Password" required="required"><div class="input_border"></div></div>
-                            <div style="margin-bottom: 18px"><input type="password" name="password2" class="contact_input contact_input_subject inpt" placeholder="Confirm Password" required="required"><div class="input_border"></div></div>
-                            
+							<div style="margin-bottom: 18px"><input type="email" name="email" class="contact_input contact_input_email inpt" placeholder="Your E-mail" required="required"><div class="input_border"></div></div>
+							<!-- need phone, nation, gender here  OK!-->
+							<div style="margin-bottom: 18px"><input type="text" name="phone" class="contact_input contact_input_phone inpt" placeholder="Phone number" required="required"><div class="input_border"></div></div>
+							<div style="margin-bottom: 18px"><input type="text" name="nation" class="contact_input contact_input_nation inpt" placeholder="User Nation" required="required"><div class="input_border"></div></div>
+
+							<div class="row">
+								
+								<div class="col-lg-6" style="margin-bottom: 18px">
+									<div><input type="radio" id="gender_male" name="gender" class="contact_input contact_input_email inpt" ><label for="gender_male">Male</label></div>
+								</div>
+								<div class="col-lg-6" style="margin-bottom: 18px">
+									<div><input type="radio" id="gender_female" name="gender" class="contact_input contact_input_subject inpt"><label for="gender_female">Female</label></div>
+								</div>
+							</div>
+
+
+
 							
 							<button class="contact_button">Register</button>
 						</form>
