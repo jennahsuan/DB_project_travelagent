@@ -129,3 +129,4 @@ python manage.py createsuperuser
 
 ## Reference
 https://github.com/UtkarshChaurasia/travello.git
+https://github.com/okanuregen/Django---Hotel-Management-System.git

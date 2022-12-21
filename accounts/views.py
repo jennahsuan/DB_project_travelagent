@@ -49,12 +49,12 @@ def register(request):
             else:
                 user = User.objects.create_user(username=username, password=password1, email=email,first_name=first_name,last_name=last_name)
                 user.save()
-                # phone = request.POST['phone']
-                # nation = request.POST['nation']
-                # gender = request.POST['gender']
+                phone = request.POST['phone']
+                nation = request.POST['nation']
+                gender = request.POST['gender']
                 curGuest = Member(
-                    user=user, phone='0911111111',name = first_name, email=email, nation= 'Taiwan',gender='M')
-                    # user=user, phone=phone,name = username, email=email, nation= nation,gender=gender)
+                    # user=user, phone='0911111111',name = first_name, email=email, nation= 'Taiwan',gender='M')
+                    user=user, phone=phone,name = username, email=email, nation= nation,gender=gender)
                 curGuest.save()
                 
                 return redirect('login')   

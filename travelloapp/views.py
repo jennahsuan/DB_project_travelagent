@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import Destination
+from . models import *
 
 # Create your views here.
 def index(request):
@@ -12,3 +12,14 @@ def index(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+# def book(request):
+#     curbooking = Order()
+#     curbooking.save()
+#     return render(request,  "bookings.html")
+
+# def guide_check_schdule(request):
+#     return render(request,  "guide-schedule.html")
+
+# def guide_check_detail(request):
+#     return render(request,  "guide-tour-detail.html")

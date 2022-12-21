@@ -1,6 +1,6 @@
 from django.db import models
 from itinerary.models import *
-from accounts.models import Guide
+from accounts.models import *
 from datetime import date
 # import uuid
 
@@ -32,3 +32,6 @@ class Tour(models.Model):
         return
     def __str__(self):
         return f'{self.id}'
+
+# class Order(models.Model):
+#     member = models.ForeignKey(Member, null=True, on_delete=models.CASCADE)
