@@ -13,10 +13,7 @@ def index(request):
 def contact(request):
     return render(request, 'contact.html')
 
-# def book(request):
-#     curbooking = Order()
-#     curbooking.save()
-#     return render(request,  "bookings.html")
+
 
 # def guide_check_schdule(request):
 #     return render(request,  "guide-schedule.html")

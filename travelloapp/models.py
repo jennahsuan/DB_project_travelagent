@@ -33,5 +33,3 @@ class Tour(models.Model):
     def __str__(self):
         return f'{self.id}'
 
-# class Order(models.Model):
-#     member = models.ForeignKey(Member, null=True, on_delete=models.CASCADE)
