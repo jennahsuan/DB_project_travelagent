@@ -32,4 +32,6 @@ class Tour(models.Model):
         return
     def __str__(self):
         return f'{self.id}'
+    def name(self):
+        return  "Trip to "+ self.itinerary_plan.site1.name 
 

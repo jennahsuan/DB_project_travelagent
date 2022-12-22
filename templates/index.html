@@ -139,12 +139,13 @@
 					<div class="home_search_container">
 						<div class="home_search_title">Search for your trip</div>
 						<div class="home_search_content">
-							<form action="#" class="home_search_form" id="home_search_form">
+							<form action="#" class="home_search_form" id="home_search_form" method="POST">
+								{% csrf_token %}
 								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<input type="text" class="search_input search_input_1" placeholder="Site" required="required">
-									<input type="text" class="search_input search_input_2" placeholder="Hotel" required="required">
-									<input type="date" class="search_input search_input_3" placeholder="Date" required="required">
-									<input type="text" class="search_input search_input_4" placeholder="Budget" required="required">
+									<input type="text" class="search_input search_input_1" placeholder="Site"  name = "site">
+									<input type="text" class="search_input search_input_2" placeholder="Field"  name = "field">
+									<input type="date" class="search_input search_input_3" placeholder="Date" name = "date">
+									<input type="text" class="search_input search_input_4" placeholder="Budget" name = "budget">
 									<button class="home_search_button">search</button>
 								</div>
 							</form>
@@ -231,7 +232,7 @@
 							</div>
 							<div class="destination_content">
 								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
+								<div class="destination_subtitle"><p>{{dest.field}}</p></div>
 								<div class="destination_price">From ${{dest.price}}</div>
 							</div>
 						</div>
