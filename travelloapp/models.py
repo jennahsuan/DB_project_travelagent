@@ -24,7 +24,7 @@ class Tour(models.Model):
     price = models.IntegerField()
     guide = models.ForeignKey(Guide, on_delete=models.SET_NULL, null = True, blank = True)
     field = models.CharField(max_length=100, null=True, blank=True)
-    total_tourist = models.IntegerField()
+    total_tourist = models.IntegerField(default = 0)
     max_tourist = models.IntegerField(default = 50)
     
     # TODO

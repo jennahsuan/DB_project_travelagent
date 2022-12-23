@@ -21,30 +21,32 @@ def add(request):
 def book(request):
     if request.method == 'POST':
         target_tour = Tour.objects.get(id=request.POST.get("tourid"))
-    curuser = request.user
-    curmember = Member.objects.get(user = curuser)
-    unit_price = target_tour.price
-    # names = []
-    # if request.method == 'POST':
-    #     if 'add' in request.POST:  # add dependence
-    #         # name = request.POST.get("name")
-    #         # names.append(name)
-    #         for i in range(target_tour.max_tourist):
-    #             nameid = "name" + str(i+1)
-    #             if request.POST.get(nameid) != "":
-    #                 names.append(request.POST.get(nameid))
-    #     tourists_count = len(names)
-    #     total_price = unit_price * tourists_count
-    curOrder = Order(tour = target_tour, member = curmember, order_tourist_count = 1, order_price = unit_price)
-    curOrder.save()
-        # for i in range(tourists_count):
-        #     nameid = "name" + str(i+1)
-        #     if request.POST.get(nameid) != "":
-        #         if request.POST.get(nameid) != None:
-        #             d = Tourist(order=curOrder,
-        #                         name=request.POST.get(nameid))
-        #             d.save()
-    return render(request,  "bookings.html")
+        curuser = request.user
+        curmember = Member.objects.get(user = curuser)
+        unit_price = target_tour.price
+        # names = []
+        # if request.method == 'POST':
+        #     if 'add' in request.POST:  # add dependence
+        #         # name = request.POST.get("name")
+        #         # names.append(name)
+        #         for i in range(target_tour.max_tourist):
+        #             nameid = "name" + str(i+1)
+        #             if request.POST.get(nameid) != "":
+        #                 names.append(request.POST.get(nameid))
+        #     tourists_count = len(names)
+        #     total_price = unit_price * tourists_count
+        curOrder = Order(tour = target_tour, member = curmember, order_tourist_count = 1, order_price = unit_price)
+        curOrder.save()
+            # for i in range(tourists_count):
+            #     nameid = "name" + str(i+1)
+            #     if request.POST.get(nameid) != "":
+            #         if request.POST.get(nameid) != None:
+            #             d = Tourist(order=curOrder,
+            #                         name=request.POST.get(nameid))
+            #             d.save()
+        return render(request,  "book.html")
+    else:
+        return render(request,  "book.html")
 
 def add_tourist(request):
     if request.method == 'POST':
