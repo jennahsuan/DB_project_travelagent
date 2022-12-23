@@ -6,7 +6,7 @@ from django.db.models import Q, F, Count
 def search_itinerary(request):
     if request.method == 'POST':
         site = request.POST["site"]
-        traveler_count = request.POST["travelers"]
+        tourists_count = request.POST["travelers"]
         date = request.POST["date"]
         budget = request.POST["budget"]
         tours = Tour.objects.filter(Q(field__contains = site) & (
@@ -14,12 +14,17 @@ def search_itinerary(request):
                                     Q(itinerary_plan__site2__name__contains = site) | 
                                     Q(itinerary_plan__site3__name__contains = site) | 
                                     Q(itinerary_plan__site4__name__contains = site)) )
-        tours = tours.annotate(quota = Count(F('max_tourist') - F('total_tourist'))).filter(quota__gte = traveler_count)    # tour quota >= traveler count                   
+        tours = tours.annotate(quota = Count(F('max_tourist') - F('total_tourist'))).filter(quota__gte = tourists_count)    # tour quota >= traveler count                   
         if date != '':
             tours = tours.filter(Q(startDate__gte = date))  # tour start date >= input date
         if budget != '':
             tours = tours.filter(Q(price__lte = budget))   # tour price <= input budget
-        return render(request, 'index.html',{'dests': tours})
+        context = {
+            'dests': tours, 
+            # 'tourists_count':list(range(1, int(tourists_count)+1))
+            'tourists_count':int(tourists_count)
+        }
+        return render(request, 'index.html', context)
     else:
         return render(request,'index.html')
 

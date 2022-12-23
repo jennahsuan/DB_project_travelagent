@@ -117,16 +117,27 @@
 				<div class="col-lg-6">
 					<div class="contact_form_container">
 						<form action="#" id="contact_form" class="contact_form">
-							<div style="margin-bottom: 18px"><input type="text" class="contact_input contact_input_name inpt" placeholder="Participant Name" required="required"><div class="input_border"></div></div>
+							<!-- TODO: use tourists_count here for the loop -->
+							{% for n in  '12'|make_list  %}
+							<div class="destination_price">Traveler {{n}}</div>
+							<div style="margin-bottom: 18px"><input type="text" class="contact_input contact_input_name inpt" placeholder="Participant Name" required="required" name="name{{forloop.counter}}"><div class="input_border"></div></div>
 							<div class="row">
 								<div class="col-lg-6" style="margin-bottom: 18px">
-									<div><input type="text" class="contact_input contact_input_email inpt" placeholder="Your E-mail" required="required"><div class="input_border"></div></div>
+									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="ID No." required="required" name="id{{forloop.counter}}"><div class="input_border"></div></div>
 								</div>
 								<div class="col-lg-6" style="margin-bottom: 18px">
-									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Subject" required="required"><div class="input_border"></div></div>
+									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Food Concern" name="food{{forloop.counter}}"><div class="input_border"></div></div>
 								</div>
 							</div>
-							<!-- <div><textarea class="contact_textarea contact_input inpt" placeholder="Message" required="required"></textarea><div class="input_border" style="bottom:3px"></div></div> -->
+							<div class="row">
+								<div class="col-lg-6" style="margin-bottom: 18px">
+									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Disease" name="disease{{forloop.counter}}"><div class="input_border"></div></div>
+								</div>
+								<div class="col-lg-6" style="margin-bottom: 18px">
+									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Allergic" name="allergic{{forloop.counter}}"><div class="input_border"></div></div>
+								</div>
+							</div>
+							{% endfor %}
 							<button class="contact_button">Confirm</button>
 						</form>
 					</div>
