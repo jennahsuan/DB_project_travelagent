@@ -11,24 +11,24 @@ class GenderOptions(models.TextChoices):
     FEMALE = 'F'
     MALE = 'M'
 
-class NationOptions(models.TextChoices):
-    TAIWAN = 'Taiwan'
-    JAPAN = 'Japan'
-    KOREA = 'Korea'
-    USA = 'USA'
-    Russia ='Russia' 
-    Switzerland = 'Switzerland'
-    Iceland = 'Iceland'
+# class NationOptions(models.TextChoices):
+#     TAIWAN = 'Taiwan'
+#     JAPAN = 'Japan'
+#     KOREA = 'Korea'
+#     USA = 'USA'
+#     Russia ='Russia' 
+#     Switzerland = 'Switzerland'
+#     Iceland = 'Iceland'
 
 
 class Member(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, null=True, blank=True, unique=False)
-    phone = PhoneNumberField(null=False, blank=False, unique=True)
+    phone = PhoneNumberField(null=False, blank=False, unique=False)
     email = models.EmailField(null=True, blank=True)
     gender = models.CharField(max_length=1, choices=GenderOptions.choices)
     birthday = models.DateField(default=datetime.date.today)
-    nation = models.CharField(max_length=20, choices=NationOptions.choices) # CountryField(null=False, blank=False)
+    nation = models.CharField(max_length=100) # , choices=NationOptions.choices CountryField(null=False, blank=False)
     register_Date = models.DateField(default=datetime.date.today)
     # class Meta:
     #     app_label = 'accounts.member'

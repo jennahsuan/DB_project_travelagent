@@ -23,12 +23,13 @@ class Order(models.Model):
     #     super().save(*args, **kwargs)
 
 class Tourist(models.Model):
-    id = models.CharField(primary_key=True, max_length=10)
+    # id = models.CharField(primary_key=True, max_length=10)
     name = models.CharField(max_length=200, null=False, blank=False)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     food_concern = models.CharField(max_length=200, null=True, blank=True)
     allergic = models.CharField(max_length=200, null=True, blank=True)
     disease = models.CharField(max_length=200, null=True, blank=True)
+    id_card = models.CharField(max_length=10, default ='H111111111')
 
     def __str__(self):
         return str(self.id)

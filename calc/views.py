@@ -34,6 +34,8 @@ def book(request, tour_id, tourists_count):
             curOrder = Order(tour = target_tour, member = curmember, 
                             order_tourist_count = tourists_count, order_price = order_price)
             curOrder.save()
+            target_tour.total_tourist += tourists_count
+            target_tour.save()
 
             for i in range(tourists_count):
                 nameid = "name" + str(i+1)
@@ -43,7 +45,7 @@ def book(request, tour_id, tourists_count):
                 allergicid = "allergic" + str(i+1)
                 # print(nameid, ' name ', request.POST[nameid], 'id ',request.POST[idid])
                 d = Tourist(order=curOrder, name=request.POST[nameid],
-                            id=request.POST[idid],food_concern=request.POST[foodid],
+                            id_card=request.POST[idid],food_concern=request.POST[foodid],
                             disease=request.POST[diseaseid], allergic=request.POST[allergicid])
                 d.save()
         context = {'order_price': order_price,
