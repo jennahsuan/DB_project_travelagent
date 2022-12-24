@@ -14,7 +14,8 @@ class Order(models.Model):
     class Meta:
         verbose_name = "Order"
         verbose_name_plural = "Orders"
-
+    def __str__(self):
+        return str(self.id)
     # def save(self, *args, **kwargs):
     #     # calculate total price
     #     unit_price = self.tour.price

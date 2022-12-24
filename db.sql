@@ -5,7 +5,7 @@
 -- Dumped from database version 14.2
 -- Dumped by pg_dump version 14.2
 
--- Started on 2022-12-16 17:49:00
+-- Started on 2022-12-24 17:17:47
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1099,6 +1099,7 @@ INSERT INTO public.accounts_member VALUES (4, 'Young', '0912-089-850', 'M', '197
 INSERT INTO public.accounts_member VALUES (12, 'Ash', '0911111111', 'M', '2022-12-16', 'Taiwan', '2022-12-16', 7, 'qqq@qqq.com');
 INSERT INTO public.accounts_member VALUES (2, 'Debi', '0961-300-252', 'F', '1986-02-11', 'Korea', '2018-10-18', 13, 'debihersey@hotmail.com');
 INSERT INTO public.accounts_member VALUES (5, 'Joyce', '0916-150-520', 'F', '1987-07-15', 'Switzerland', '2013-08-23', 14, 'joyceclark1987@gmail.com');
+INSERT INTO public.accounts_member VALUES (13, 't6', '0988123456', 'M', '2022-12-21', 'Japan', '2022-12-21', 16, 'ststst@iii.com');
 
 
 --
@@ -1211,6 +1212,7 @@ INSERT INTO public.auth_user VALUES (14, 'pbkdf2_sha256$260000$cpDVV2pvMrbarCkkd
 INSERT INTO public.auth_user VALUES (2, 'pbkdf2_sha256$260000$hvtAOXwoxhtCT4HwhuxLvO$RTgvgNY5vBNmvKwKxRTKhfb27hdjVdoJl2NRtfHuaC4=', NULL, false, 'Joseph', 'Joseph', 'Bash', 'josephbash13@iCloud.com', false, true, '2022-12-16 11:03:36.410782+08');
 INSERT INTO public.auth_user VALUES (3, 'pbkdf2_sha256$260000$0joLRhwz2s8B68eXLlY7QM$2vWbwyhbz0gapeSTKFx+sqQ/WDW8euIRkHFQdpIFV5s=', NULL, false, 'Gregory', 'Gregory', 'Muller', 'gregorymuller0525@gmail.com', false, true, '2022-12-16 15:04:40.902569+08');
 INSERT INTO public.auth_user VALUES (4, 'pbkdf2_sha256$260000$en70SOWXGoEts2iNRwOsKv$pDCufNbuB0NAxw8VVUBrI9kP9KNxF8dZR2ilpqRv6X8=', NULL, false, 'Young', 'Young', 'Sutton', 'youngsutton0604@gmail.com', false, true, '2022-12-16 15:09:19.279434+08');
+INSERT INTO public.auth_user VALUES (16, 'pbkdf2_sha256$260000$fi8rxwnTDVoaKePSLAM88K$iBWRhw1BgMUdFR3GOTHvgd7g0BQD597LqyndgqDQoJo=', '2022-12-23 10:37:24.667141+08', false, 't6', 'Steve', 'Q', 'ststst@iii.com', false, true, '2022-12-21 13:12:27.184126+08');
 
 
 --
@@ -1237,6 +1239,7 @@ INSERT INTO public.auth_user VALUES (4, 'pbkdf2_sha256$260000$en70SOWXGoEts2iNRw
 
 INSERT INTO public.calc_order VALUES (1, 32, 4, 1, 1872000);
 INSERT INTO public.calc_order VALUES (2, 22, 10, 1, 1287000);
+INSERT INTO public.calc_order VALUES (17, 2, 13, 2, 8000);
 
 
 --
@@ -1299,6 +1302,8 @@ INSERT INTO public.calc_tourist VALUES ('G149467420', 'Michael', 'no pork', 'no'
 INSERT INTO public.calc_tourist VALUES ('A229251820', 'Geri', 'vegetarian', 'no', 'alzheimer disease', 2);
 INSERT INTO public.calc_tourist VALUES ('A110058610', 'George', 'pescatarian', 'no', 'no', 2);
 INSERT INTO public.calc_tourist VALUES ('A116956220', 'Gary', 'without any', 'no', 'kidney', 2);
+INSERT INTO public.calc_tourist VALUES ('H123456789', 'Andy', 'peanuts', 'peanuts', 'No', 17);
+INSERT INTO public.calc_tourist VALUES ('H22345678', 'Ella', 'No', 'No', 'carsick', 17);
 
 
 --
@@ -1367,6 +1372,7 @@ INSERT INTO public.django_migrations VALUES (24, 'accounts', '0003_alter_member_
 INSERT INTO public.django_migrations VALUES (25, 'travelloapp', '0002_auto_20221209_2106', '2022-12-09 21:06:25.01238+08');
 INSERT INTO public.django_migrations VALUES (26, 'calc', '0002_order_order_price', '2022-12-09 21:30:19.714591+08');
 INSERT INTO public.django_migrations VALUES (27, 'calc', '0003_auto_20221209_2134', '2022-12-09 21:34:59.652149+08');
+INSERT INTO public.django_migrations VALUES (28, 'travelloapp', '0003_alter_tour_total_tourist', '2022-12-23 11:32:50.313026+08');
 
 
 --
@@ -1375,6 +1381,7 @@ INSERT INTO public.django_migrations VALUES (27, 'calc', '0003_auto_20221209_213
 -- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.django_session VALUES ('h5e1qejcnnvvjgldy85i8czuyyvy0nr0', '.eJxVjEEOwiAURO_C2hA-UD516b5nIMAHqRqalHZlvLs06UJ3k5k3782c37fi9pZWNxO7MjDs8lsGH5-pHgs9fL0vPC51W-fAD4Sfa-PTQul1O9k_QfGt9LdMygej0epsqWcZshw8UAIBqFAjGoEKSHalHgeKkAhGZbXIMUQZ2ecLBjk4JQ:1p8Xw4:Yc6ZMcNwVmSl9ABQ4WKyUgHdR7Eb-97P5mAByoR7jSE', '2023-01-06 10:37:24.671015+08');
 
 
 --
@@ -1483,6 +1490,7 @@ INSERT INTO public.itinerary_site VALUES (10, 'entertainment venue', 'city cente
 -- Data for Name: travelloapp_destination; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.travelloapp_destination VALUES (1, 'taitung trip', '', 'taitung', 100, false);
 
 
 --
@@ -1492,6 +1500,7 @@ INSERT INTO public.itinerary_site VALUES (10, 'entertainment venue', 'city cente
 --
 
 INSERT INTO public.travelloapp_tour VALUES (1, '2024-01-05', 58500, 'tour', 54, 8, 2, 1, 55);
+INSERT INTO public.travelloapp_tour VALUES (2, '2023-01-01', 4000, 'family', 30, 2, 3, 4, 40);
 
 
 --
@@ -1509,7 +1518,7 @@ SELECT pg_catalog.setval('public.accounts_guide_id_seq', 1, false);
 -- Name: accounts_member_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.accounts_member_id_seq', 12, true);
+SELECT pg_catalog.setval('public.accounts_member_id_seq', 13, true);
 
 
 --
@@ -1554,7 +1563,7 @@ SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_user_id_seq', 14, true);
+SELECT pg_catalog.setval('public.auth_user_id_seq', 16, true);
 
 
 --
@@ -1572,7 +1581,7 @@ SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
 -- Name: calc_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.calc_order_id_seq', 1, false);
+SELECT pg_catalog.setval('public.calc_order_id_seq', 17, true);
 
 
 --
@@ -1599,7 +1608,7 @@ SELECT pg_catalog.setval('public.django_content_type_id_seq', 17, true);
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 27, true);
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 28, true);
 
 
 --
@@ -1662,7 +1671,7 @@ SELECT pg_catalog.setval('public.travelloapp_destination_id_seq', 1, false);
 -- Name: travelloapp_tour_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.travelloapp_tour_id_seq', 1, false);
+SELECT pg_catalog.setval('public.travelloapp_tour_id_seq', 13, true);
 
 
 --
@@ -2384,7 +2393,7 @@ ALTER TABLE ONLY public.travelloapp_tour
     ADD CONSTRAINT travelloapp_tour_itinerary_plan_id_bcda57ae_fk_itinerary FOREIGN KEY (itinerary_plan_id) REFERENCES public.itinerary_itinerary(id) DEFERRABLE INITIALLY DEFERRED;
 
 
--- Completed on 2022-12-16 17:49:00
+-- Completed on 2022-12-24 17:17:47
 
 --
 -- PostgreSQL database dump complete

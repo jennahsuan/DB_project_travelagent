@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
-from rest_framework.response import Response
-from rest_framework import status
+# from rest_framework.response import Response
+# from rest_framework import status
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
@@ -41,28 +41,12 @@ def book(request, tour_id, tourists_count):
                 foodid = "food" + str(i+1)
                 diseaseid = "disease" + str(i+1)
                 allergicid = "allergic" + str(i+1)
-                if request.POST[nameid] != "" and request.POST[nameid] != None:
-                    d = Tourist(order=curOrder, name=request.POST[nameid],
-                                id=request.POST[idid],food_concern=request.POST[foodid],
-                                disease=request.POST[diseaseid], allergic=request.POST[allergicid])
-                    d.save()
+                # print(nameid, ' name ', request.POST[nameid], 'id ',request.POST[idid])
+                d = Tourist(order=curOrder, name=request.POST[nameid],
+                            id=request.POST[idid],food_concern=request.POST[foodid],
+                            disease=request.POST[diseaseid], allergic=request.POST[allergicid])
+                d.save()
         context = {'order_price': order_price,
-                   'tour': target_tour}
+                   'tour': target_tour,
+                   'range': range(1,tourists_count+1)}
         return render(request,  "book.html", context)
-    # else:
-    #     return render(request,  "book.html")
-
-# def add_tourist(request):
-#     if request.method == 'POST':
-#         target_order = Order.objects.get(id=request.POST.get("orderid"))
-#         name = request.POST.get("name")
-#         id = request.POST.get("id")
-#         allergic = request.POST.get("allergic")
-#         disease = request.POST.get("disease")
-#         food_concern = request.POST.get("food_concern")
-#         curtourist = Tourist(id = id, name = name, allergic = allergic, order = target_order,
-#                              disease = disease, food_concern = food_concern)
-#         curtourist.save()
-#         return Response({"message": "good"}, status=status.HTTP_200_OK)
-#     else:
-#         return Response("Plz login", status=status.HTTP_400_BAD_REQUEST)

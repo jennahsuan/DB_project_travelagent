@@ -116,9 +116,9 @@
 				<!-- Enter travelers information -->
 				<div class="col-lg-6">
 					<div class="contact_form_container">
-						<form action="#" id="contact_form" class="contact_form">
-							<!-- TODO: use tourists_count here for the loop -->
-							{% for n in  '12'|make_list  %}
+						<form action="#" id="contact_form" class="contact_form" method="POST">
+							{% csrf_token %}
+							{% for n in range %}
 							<div class="destination_price">Traveler {{n}}</div>
 							<div style="margin-bottom: 18px"><input type="text" class="contact_input contact_input_name inpt" placeholder="Participant Name" required="required" name="name{{forloop.counter}}"><div class="input_border"></div></div>
 							<div class="row">
@@ -139,7 +139,7 @@
 							</div>
 							{% endfor %}
 							<button class="contact_button">Confirm</button>
-							<button href="" class="contact_button" onclick="history.back();">Cancel</button>
+							<!-- TODO: show Success message or go back to index.html-->
 						</form>
 					</div>
 				</div>
