@@ -234,10 +234,8 @@
 								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
 								<div class="destination_subtitle"><p>{{dest.field}}</p></div>
 								<div class="destination_price"> ${{dest.price}}</div>
-								<!-- <input type="hidden" value="{{ tourists_count }}" name="tourists_count"> -->
-								<button class="book_button"><a href="book.html">Book</a></button>
-								<!-- TODO: send context value 'traveler_count' into book.html -->
-								<!-- TODO (not so important): if not yet login, go to login html?  -->
+								<a href="{% url 'book' dest.id tourists_count %}"
+                                   class="book_button">Book</a>
 							</div>
 						</div>
 

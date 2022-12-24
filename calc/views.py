@@ -18,31 +18,39 @@ def add(request):
     return render(request,"result.html",{'result':res})
 
 @login_required(login_url='login')
-def book(request):
-    if request.method == 'POST':
-        target_tour = Tour.objects.get(id=request.POST.get("tourid"))
+def book(request, tour_id, tourists_count):
+    # print('tour id ', tour_id, ' count ',tourists_count)
+    if not request.user.is_authenticated:  # 如果没登录就render登录页面
+        return render(request, 'login.html')
+    else:
+        tourists_count = int(tourists_count)
+        target_tour = Tour.objects.get(id=tour_id)
         unit_price = target_tour.price
+        order_price = unit_price *tourists_count
         curuser = request.user
         curmember = Member.objects.get(user = curuser)
-        tourists_count = request.POST.get("tourists_count")
 
-        curOrder = Order(tour = target_tour, member = curmember, order_tourist_count = 1, order_price = unit_price)
-        curOrder.save()
-        for i in range(tourists_count):
-            nameid = "name" + str(i+1)
-            idid = "id" + str(i+1)
-            foodid = "food" + str(i+1)
-            diseaseid = "disease" + str(i+1)
-            allergicid = "allergic" + str(i+1)
-            if request.POST.get(nameid) != "":
-                if request.POST.get(nameid) != None:
-                    d = Tourist(order=curOrder, name=request.POST.get(nameid),
-                                id=request.POST.get(idid),food_concern=request.POST.get(foodid),
-                                disease=request.POST.get(diseaseid), allergic=request.POST.get(allergicid))
+        if request.method == 'POST':
+            curOrder = Order(tour = target_tour, member = curmember, 
+                            order_tourist_count = tourists_count, order_price = order_price)
+            curOrder.save()
+
+            for i in range(tourists_count):
+                nameid = "name" + str(i+1)
+                idid = "id" + str(i+1)
+                foodid = "food" + str(i+1)
+                diseaseid = "disease" + str(i+1)
+                allergicid = "allergic" + str(i+1)
+                if request.POST[nameid] != "" and request.POST[nameid] != None:
+                    d = Tourist(order=curOrder, name=request.POST[nameid],
+                                id=request.POST[idid],food_concern=request.POST[foodid],
+                                disease=request.POST[diseaseid], allergic=request.POST[allergicid])
                     d.save()
-        return render(request,  "book.html")
-    else:
-        return render(request,  "book.html")
+        context = {'order_price': order_price,
+                   'tour': target_tour}
+        return render(request,  "book.html", context)
+    # else:
+    #     return render(request,  "book.html")
 
 # def add_tourist(request):
 #     if request.method == 'POST':

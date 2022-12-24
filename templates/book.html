@@ -113,7 +113,7 @@
 		<div class="container">
 			<div class="row">
 
-				<!-- Contact Form -->
+				<!-- Enter travelers information -->
 				<div class="col-lg-6">
 					<div class="contact_form_container">
 						<form action="#" id="contact_form" class="contact_form">
@@ -139,9 +139,38 @@
 							</div>
 							{% endfor %}
 							<button class="contact_button">Confirm</button>
+							<button href="" class="contact_button" onclick="history.back();">Cancel</button>
 						</form>
 					</div>
 				</div>
+
+				<!-- ticket detail -->
+				<div class="col-lg-6">
+					<div class="contact_content">
+						<div class="contact_title">You are now booking...</div>
+						<div class="contact_text">
+							<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
+						</div>
+						<div class="contact_list">
+							<ul>
+								<li>
+									<div>Tour Name</div>
+									<div>{{tour.name}}</div>
+								</li>
+								<li>
+									<div>Unit Price:</div>
+									<div>{{tour.price}}</div>
+								</li>
+								<li>
+									<div>Total Price</div>
+									<div>{{order_price}}</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</div>

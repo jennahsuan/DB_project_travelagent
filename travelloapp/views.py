@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from . models import *
-from django.db.models import Q, F, Count
+from django.db.models import Q, F
 
 # Create your views here.
 def search_itinerary(request):
@@ -14,14 +14,13 @@ def search_itinerary(request):
                                     Q(itinerary_plan__site2__name__contains = site) | 
                                     Q(itinerary_plan__site3__name__contains = site) | 
                                     Q(itinerary_plan__site4__name__contains = site)) )
-        tours = tours.annotate(quota = Count(F('max_tourist') - F('total_tourist'))).filter(quota__gte = tourists_count)    # tour quota >= traveler count                   
+        tours = tours.annotate(quota = F('max_tourist') - F('total_tourist')).filter(quota__gte = tourists_count)    # tour quota >= traveler count                   
         if date != '':
             tours = tours.filter(Q(startDate__gte = date))  # tour start date >= input date
         if budget != '':
             tours = tours.filter(Q(price__lte = budget))   # tour price <= input budget
         context = {
             'dests': tours, 
-            # 'tourists_count':list(range(1, int(tourists_count)+1))
             'tourists_count':int(tourists_count)
         }
         return render(request, 'index.html', context)
