@@ -101,10 +101,7 @@ python manage.py createsuperuser
 - [**POSTGRESQL**](https://www.postgresql.org/)
 
 - [**kanban**](https://www.notion.so/65fda7ca561d472d85257791d9525a06?v=16f41c887d7249e4af52043d52b61dd7)
-<!-- 
----
 
-## :iphone: Screenshots
 
 ---
 

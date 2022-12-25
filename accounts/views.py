@@ -3,6 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from accounts.models import *
 from .forms import *
+from travelloapp.models import *
 # Create your views here.
 
 # differnt account for members and employee:
@@ -19,6 +20,13 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
+            if user.is_staff:
+                guide = Guide.objects.get(user_id=user.id)
+                tours = Tour.objects.filter(guide_id = guide.id)
+                context = {'user': user,
+                           'guide': guide,
+                           'tours': tours}
+                return render(request, "tours-of-guide.html", context)
             return redirect("/")
 
         else:
