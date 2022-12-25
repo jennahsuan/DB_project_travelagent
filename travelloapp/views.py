@@ -30,11 +30,3 @@ def search_itinerary(request):
 
 def contact(request):
     return render(request, 'contact.html')
-
-
-
-# def guide_check_schdule(request):
-#     return render(request,  "guide-schedule.html")
-
-# def guide_check_detail(request):
-#     return render(request,  "guide-tour-detail.html")

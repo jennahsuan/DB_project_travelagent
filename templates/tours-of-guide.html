@@ -117,23 +117,31 @@
 				<!-- responsible tours -->
 				<div class="col-lg-6">
 					<div class="contact_content">
-						<div class="contact_title">Guide {{guide.name}}</div>
-						<!-- TODO: for tour in tours, show tour.name, date ... -->
-						<div class="contact_list">
-							<ul>
-								<li>
-									<div>Tour Name</div>
-									<!-- <div>{{tour.name}}</div> -->
-								</li>
-								<li>
-									<div>Unit Price:</div>
-									<!-- <div>{{tour.price}}</div> -->
-								</li>
-								<li>
-									<div>Total Price</div>
-									<!-- <div>{{order_price}}</div> -->
-								</li>
-							</ul>
+						<div class="contact_title">Hello Guide {{guide.name}}, you are in charge of:</div>
+						<!-- use acccount g2 to check the result (passeord : test)-->
+						<div >
+							{% if tours %}
+							<table >
+								<thead>
+								<th  class="destination_title"> Name </th>
+								<th  class="destination_title"> Date </th>
+								<th  class="destination_title"> Participants </th>
+								<th  class="destination_title"> Driver </th>
+								</thead>
+								<tbody >
+								{% for tour in tours %}
+									<tr>
+										<td><a href="{% url 'detail' tour.id %}"> {{ tour.name }} </a></td>
+										<td> {{ tour.startDate }} </td>
+										<td> {{ tour.total_tourist }} </td>
+										<td> {{ tour.bus.driverName }} </td>
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+							{% else %}
+							<div class="contact_title">None</div>
+							{% endif %}
 						</div>
 					</div>
 				</div>

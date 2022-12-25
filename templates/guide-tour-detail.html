@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Booking</title>
+<title>Tours of Guide</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travello template project">
@@ -113,59 +113,39 @@
 		<div class="container">
 			<div class="row">
 
-				<!-- Enter travelers information -->
-				<div class="col-lg-6">
-					<div class="contact_form_container">
-						<form action="#" id="contact_form" class="contact_form" method="POST">
-							{% csrf_token %}
-							{% for n in range %}
-							<div class="destination_price">Traveler {{n}}</div>
-							<div style="margin-bottom: 18px"><input type="text" class="contact_input contact_input_name inpt" placeholder="Participant Name" required="required" name="name{{forloop.counter}}"><div class="input_border"></div></div>
-							<div class="row">
-								<div class="col-lg-6" style="margin-bottom: 18px">
-									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="ID No." required="required" name="id{{forloop.counter}}"><div class="input_border"></div></div>
-								</div>
-								<div class="col-lg-6" style="margin-bottom: 18px">
-									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Food Concern" name="food{{forloop.counter}}"><div class="input_border"></div></div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-6" style="margin-bottom: 18px">
-									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Disease" name="disease{{forloop.counter}}"><div class="input_border"></div></div>
-								</div>
-								<div class="col-lg-6" style="margin-bottom: 18px">
-									<div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Allergic" name="allergic{{forloop.counter}}"><div class="input_border"></div></div>
-								</div>
-							</div>
-							{% endfor %}
-							<button class="contact_button">Confirm</button>
-							<!-- TODO: show Success message or go back to index.html-->
-						</form>
-					</div>
-				</div>
 
-				<!-- ticket detail -->
+				<!-- travelers of a tour -->
 				<div class="col-lg-6">
 					<div class="contact_content">
-						<div class="contact_title">You are now booking...</div>
-						<div class="contact_text">
-							<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
-						</div>
-						<div class="contact_list">
-							<ul>
-								<li>
-									<div>Tour Name</div>
-									<div>{{tour.name}}</div>
-								</li>
-								<li>
-									<div>Unit Price</div>
-									<div>{{tour.price}}</div>
-								</li>
-								<li>
-									<div>Total Price</div>
-									<div>{{order_price}}</div>
-								</li>
-							</ul>
+						<div class="contact_title">{{tour.name}}</div>
+						<div >Apart Date: {{tour.startDate}}</div>
+						<div >Driver: {{tour.bus.driverName}}</div>
+						<div >Hotel: {{tour.itinerary_plan.hotel1.name}}</div>
+						<div >
+							{% if tourists %}
+							<table >
+								<thead>
+								<th  class="destination_title"> Name </th>
+								<th  class="destination_title"> ID </th>
+								<th  class="destination_title"> Food concern </th>
+								<th  class="destination_title"> Allergic </th>
+								<th  class="destination_title"> Disease </th>
+								</thead>
+								<tbody>
+								{% for tourist in tourists %}
+									<tr>
+										<td> {{ tourist.name }} </td>
+										<td> {{ tourist.id_card }} </td>
+										<td> {{ tourist.food_concern }} </td>
+										<td> {{ tourist.allergic }} </td>
+										<td> {{ tourist.disease }} </td>
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+							{% else %}
+							<div class="contact_title">No participants yet.</div>
+							{% endif %}
 						</div>
 					</div>
 				</div>

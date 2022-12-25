@@ -4,6 +4,7 @@ from django.contrib import messages
 from accounts.models import *
 from .forms import *
 from travelloapp.models import *
+from calc.models import *
 # Create your views here.
 
 # differnt account for members and employee:
@@ -83,11 +84,24 @@ def register(request):
 
 def logout(request):
     auth.logout(request)
+    # TODO: fix redirect error when logout click is not on home page
     return redirect("/")
 
 def contact(request):
     return render(request, 'contact.html')
 
+def guide_check_detail(request, tour_id):
+    tour = Tour.objects.get(id = tour_id)
+    orders = Order.objects.filter(tour_id = tour_id)
+    order_list = []
+    for order in orders:
+        order_list.append(order.id)
+    tourists = Tourist.objects.filter(order_id__in = order_list)
+    context = {
+        'tour':tour,
+        'tourists':tourists,
+    }
+    return render(request,  "guide-tour-detail.html", context)
 
 # def add_employee(request):
 #     form = CreateUserForm()
