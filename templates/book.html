@@ -141,7 +141,13 @@
 								</div>
 							</div>
 							{% endfor %}
-							<button class="contact_button">Confirm</button>
+							<button class="contact_button" onclick="myFunction()">Confirm</button>
+							<script>
+								function myFunction(){
+									alert('Success booking!');
+									history.back();
+								}
+							</script>
 							<!-- TODO: show Success message or go back to index.html-->
 						</form>
 					</div>
