@@ -84,8 +84,10 @@ def register(request):
 
 def logout(request):
     auth.logout(request)
-    # TODO: fix redirect error when logout click is not on home page
-    return redirect("/")
+    # return redirect("/")
+    return render(request, 'login.html')
+
+
 
 def contact(request):
     return render(request, 'contact.html')

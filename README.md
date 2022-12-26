@@ -106,6 +106,6 @@ python manage.py createsuperuser
 ---
 
 ## Reference
-https://github.com/UtkarshChaurasia/travello.git
-https://github.com/okanuregen/Django---Hotel-Management-System.git
-https://github.com/Shuai-Xie/flight-ticket-booksystem.git
+- https://github.com/UtkarshChaurasia/travello.git
+- https://github.com/okanuregen/Django---Hotel-Management-System.git
+- https://github.com/Shuai-Xie/flight-ticket-booksystem.git
