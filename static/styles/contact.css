@@ -1091,7 +1091,9 @@ section
 table{
 	width: 100%;
 }
-
+td:nth-of-type(even){
+	background-color:#dcdcdc;
+}
 
 
 
