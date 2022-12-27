@@ -9,7 +9,7 @@ def search_itinerary(request):
         tourists_count = request.POST["travelers"]
         date = request.POST["date"]
         budget = request.POST["budget"]
-        tours = Tour.objects.filter(Q(field__contains = site) & (
+        tours = Tour.objects.filter(Q(field__contains = site) | (
                                     Q(itinerary_plan__site1__name__contains = site) | 
                                     Q(itinerary_plan__site2__name__contains = site) | 
                                     Q(itinerary_plan__site3__name__contains = site) | 

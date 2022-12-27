@@ -120,9 +120,11 @@
 				<div class="col-lg-6">
 					<div class="contact_content">
 						<div class="contact_title">{{tour.name}}</div>
-						<div >Apart Date: {{tour.startDate}}</div>
 						<div >Driver: {{tour.bus.driverName}}</div>
-						<div >Hotel: {{tour.itinerary_plan.hotel1.name}}</div>
+						<div >Apart Date: {{tour.startDate}}</div>
+						<div >Day1: {{tour.itinerary_plan.site1.name}} -> {{tour.itinerary_plan.lunch1.name}} -> {{tour.itinerary_plan.site2.name}} -> {{tour.itinerary_plan.hotel1.name}}</div>
+						<div >Day2: {{tour.itinerary_plan.site3.name}} -> {{tour.itinerary_plan.lunch2.name}} -> {{tour.itinerary_plan.site4.name}} </div>
+						<div >{{tour.total_tourist}} Travellers detail: </div>
 						<div >
 							{% if tourists %}
 							<table >
@@ -146,10 +148,12 @@
 								</tbody>
 							</table>
 
-							<button type="button" class="btn btn-light" onclick="history.back()">Last Page</button>
+							
 							{% else %}
 							<div class="contact_title">No participants yet.</div>
 							{% endif %}
+							<button type="button" class="btn btn-light" onclick="history.back()">Last Page</button>
+							<!-- <button type="button" class="btn btn-light" href="/">Last Page</button> -->
 						</div>
 					</div>
 				</div>
