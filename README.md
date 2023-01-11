@@ -2,6 +2,18 @@
 
 A travel planner website UI integrated with PostgreSQL. User can register and sign in.
 
+
+---
+
+## Functions
+### Customers
+- reigster, login, logout
+- search for tours
+- book tours
+### Guides
+- login, logout
+- check own schedule & details of a tour he/she is responsible for
+
 ---
 
 ## Setup
@@ -41,8 +53,6 @@ A travel planner website UI integrated with PostgreSQL. User can register and si
     ```
 5. Open travello/settings.py, use the correct 'PASSWORD' in DATABASES. 
 
-<!-- 5. 第一次runserver 後，應該就能在pgAdmin看到DB_travel/Schemas/public/Tables 內看到多個tables。在一table按右鍵 -> View/Edit data -> All rows ，即可看到表格形式的table。 -->
-<!-- python manage.py loaddata whole.json  -->
 
 <!-- export sql: https://stackoverflow.com/questions/71490970/how-to-export-postgres-schema-data-to-plain-sql-in-pgadmin-4 -->
 
@@ -94,12 +104,10 @@ python manage.py createsuperuser
 
 ---
 
-## :bulb: Built Using
+## Built Using
 
-<!-- - [**BOOTSTRAP**](https://getbootstrap.com/)   -->
 - [**DJANGO**](https://www.djangoproject.com/)
 - [**POSTGRESQL**](https://www.postgresql.org/)
-
 - [**kanban**](https://www.notion.so/65fda7ca561d472d85257791d9525a06?v=16f41c887d7249e4af52043d52b61dd7)
 
 
