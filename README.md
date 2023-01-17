@@ -7,7 +7,7 @@ A travel planner website UI integrated with PostgreSQL. User can register and si
 
 ## Functions
 ### Customers
-- reigster, login, logout
+- register, login, logout
 - search for tours
 - book tours
 ### Guides
